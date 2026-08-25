@@ -1,0 +1,3152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design Marketing — เว็บไซต์ที่ทำงานแทนคุณ</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://i.ibb.co/PZBxp544/TCC-Marketplace-Logo.png">
+<link rel="shortcut icon" href="https://i.ibb.co/PZBxp544/TCC-Marketplace-Logo.png">
+<link rel="apple-touch-icon" href="https://i.ibb.co/PZBxp544/TCC-Marketplace-Logo.png">
+
+<!-- Open Graph — LINE / Facebook / Telegram share preview -->
+<meta property="og:type"        content="website">
+<meta property="og:title"       content="Web Design Marketing — เว็บไซต์ที่ทำงานแทนคุณ">
+<meta property="og:description" content="ไม่ใช่แค่ความสวยงาม — แต่คือระบบที่ดึงลูกค้าเข้าร้าน สร้างความน่าเชื่อถือ และเพิ่มยอดขายได้จริงทุกวัน ออกแบบโลโก้ฟรีสำหรับลูกค้าใหม่ทุกราย">
+<meta property="og:image"       content="https://i.ibb.co/Swsjn8K1/Web-Desing-Share-small.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"   content="Web Design Marketing — บริการออกแบบเว็บไซต์มืออาชีพ">
+<meta property="og:locale"      content="th_TH">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Web Design Marketing — เว็บไซต์ที่ทำงานแทนคุณ">
+<meta name="twitter:description" content="ไม่ใช่แค่ความสวยงาม — แต่คือระบบที่ดึงลูกค้าเข้าร้าน สร้างความน่าเชื่อถือ และเพิ่มยอดขายได้จริงทุกวัน">
+<meta name="twitter:image"       content="https://i.ibb.co/Swsjn8K1/Web-Desing-Share-small.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   ROOT TOKENS — Modern 3D Digital
+═══════════════════════════════════════ */
+:root {
+  --black:      #050505;
+  --surface:    #0f0f0f;
+  --surface2:   #161616;
+  --surface3:   #1c1c1c;
+  --gold:       #F0B90B;
+  --gold-lt:    #F8D12F;
+  --gold-dim:   #C99A08;
+  --cream:      #FFF8E0;
+  --white:      #fafafa;
+  --muted:      rgba(255,255,255,0.55);
+  --muted2:     rgba(255,255,255,0.28);
+  --border:     rgba(240,185,11,0.22);
+  --border2:    rgba(255,255,255,0.07);
+  --radius:     14px;
+  --radius-sm:  10px;
+  --gold-grad:  linear-gradient(135deg, #F0B90B 0%, #F8D12F 45%, #C99A08 100%);
+  --gold-glow:  0 0 60px rgba(240,185,11,0.18);
+  --glass:      rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.08);
+  --shadow-deep: 0 25px 50px -12px rgba(0,0,0,0.6);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle animated grain */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: rgba(240,185,11,0.35); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(240,185,11,0.55); }
+
+/* ═══════════════════════════════════════
+   ANIMATION UTILITIES
+═══════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ═══════════════════════════════════════
+   GOLD LINE
+═══════════════════════════════════════ */
+.gold-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold-lt) 50%, var(--gold) 80%, transparent);
+  opacity: 0.45;
+}
+.gold-line-short {
+  width: 56px;
+  height: 3px;
+  background: var(--gold-grad);
+  margin-bottom: 22px;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(240,185,11,0.4);
+}
+
+/* ═══════════════════════════════════════
+   NAVBAR — Glass + sticky
+═══════════════════════════════════════ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: rgba(5,5,5,0.78);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: box-shadow 0.3s;
+}
+.navbar.scrolled { box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  object-fit: contain;
+  background: var(--surface);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+}
+.nav-logo:hover { transform: scale(1.08) rotate(-3deg); box-shadow: var(--gold-glow); }
+.nav-logo-fallback {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #1a1500, #2a2200);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px; font-weight: 800;
+  color: var(--gold);
+  letter-spacing: -1px;
+}
+.nav-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px; font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.nav-title span { color: var(--gold); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.nav-btn {
+  font-family: 'Kanit', sans-serif;
+  font-size: 13px; font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s var(--ease-out);
+  letter-spacing: 0.03em;
+  position: relative;
+  overflow: hidden;
+}
+.nav-btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--gold-lt);
+}
+.nav-btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(240,185,11,0.08);
+  transform: translateY(-1px);
+}
+.nav-btn-gold {
+  background: var(--gold-grad);
+  color: #0a0a0a;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(240,185,11,0.25);
+}
+.nav-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(240,185,11,0.4);
+}
+
+/* ═══════════════════════════════════════
+   VIEWS
+═══════════════════════════════════════ */
+.view { display: none; }
+.view.active { display: block; }
+
+/* ═══════════════════════════════════════
+   AUTH MODALS — Glassmorphism
+═══════════════════════════════════════ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  backdrop-filter: blur(12px);
+  z-index: 800;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.modal-overlay.open {
+  display: flex;
+  opacity: 1;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal {
+  background: linear-gradient(160deg, rgba(22,22,22,0.95), rgba(12,12,12,0.98));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  box-shadow: var(--gold-glow), var(--shadow-deep);
+  transform: scale(0.94) translateY(12px);
+  animation: modalIn 0.4s var(--ease-out) forwards;
+}
+@keyframes modalIn {
+  to { transform: scale(1) translateY(0); }
+}
+.modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none; border: none;
+  color: var(--muted);
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s, transform 0.2s;
+}
+.modal-close:hover { color: var(--white); transform: rotate(90deg); }
+.modal-logo { text-align: center; margin-bottom: 8px; }
+.modal-logo span {
+  font-family: 'Kanit', sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.modal h2 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 22px; font-weight: 800;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.modal-sub { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 28px; }
+.form-group { margin-bottom: 16px; }
+.form-label {
+  display: block;
+  font-size: 12px; font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.form-input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 15px;
+  color: var(--white);
+  outline: none;
+  transition: border 0.25s, box-shadow 0.25s, background 0.25s;
+}
+.form-input:focus {
+  border-color: var(--gold);
+  background: rgba(240,185,11,0.04);
+  box-shadow: 0 0 0 3px rgba(240,185,11,0.12);
+}
+.form-input::placeholder { color: rgba(255,255,255,0.22); }
+.btn-full {
+  width: 100%;
+  padding: 15px;
+  background: var(--gold-grad);
+  border: none;
+  border-radius: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px; font-weight: 700;
+  color: #0a0a0a;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.25s;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 20px rgba(240,185,11,0.25);
+}
+.btn-full:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(240,185,11,0.35);
+}
+.modal-switch { text-align: center; font-size: 13px; color: var(--muted); margin-top: 18px; }
+.modal-switch a { color: var(--gold-lt); cursor: pointer; text-decoration: underline; }
+.modal-msg { font-size: 13px; text-align: center; margin-top: 12px; min-height: 18px; }
+.modal-msg.error { color: #f87171; }
+.modal-msg.success { color: #6ee7b7; }
+
+/* ═══════════════════════════════════════
+   SECTION BASE
+═══════════════════════════════════════ */
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 90px 24px;
+}
+.wrap-wide {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 90px 24px;
+}
+.eyebrow {
+  display: inline-block;
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  position: relative;
+}
+h2.section-h {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(28px, 4.2vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+h2.section-h span { color: var(--gold); }
+.section-p { color: var(--muted); font-size: 16.5px; max-width: 640px; margin-bottom: 0; }
+
+/* ═══════════════════════════════════════
+   HERO — Immersive 3D Digital
+═══════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 130px 24px 90px;
+  position: relative;
+  overflow: hidden;
+  perspective: 1200px;
+}
+/* Floating orbs with depth */
+.hero-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  animation: floatOrb 12s ease-in-out infinite;
+}
+.hero-bg-orb.o1 {
+  width: 560px; height: 560px;
+  background: radial-gradient(circle, rgba(240,185,11,0.16) 0%, transparent 70%);
+  top: -120px; right: -180px;
+  animation-delay: 0s;
+}
+.hero-bg-orb.o2 {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(240,185,11,0.09) 0%, transparent 70%);
+  bottom: -100px; left: -120px;
+  animation-delay: -4s;
+}
+.hero-bg-orb.o3 {
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(240,215,140,0.07) 0%, transparent 70%);
+  top: 40%; left: 55%;
+  animation-delay: -7s;
+}
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -30px) scale(1.05); }
+  66% { transform: translate(-15px, 20px) scale(0.97); }
+}
+
+/* Grid perspective floor */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background:
+    linear-gradient(to top, rgba(5,5,5,0.95) 0%, transparent 100%),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(240,185,11,0.03) 60px, rgba(240,185,11,0.03) 61px),
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(240,185,11,0.03) 60px, rgba(240,185,11,0.03) 61px);
+  transform: perspective(600px) rotateX(60deg);
+  transform-origin: bottom center;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px; font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.09em;
+  margin-bottom: 36px;
+  background: rgba(240,185,11,0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 24px rgba(240,185,11,0.08);
+  animation: badgePulse 3s ease-in-out infinite;
+}
+.hero-badge::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.4); }
+}
+@keyframes badgePulse {
+  0%,100% { box-shadow: 0 0 24px rgba(240,185,11,0.08); }
+  50% { box-shadow: 0 0 36px rgba(240,185,11,0.18); }
+}
+
+.hero h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(36px, 7.5vw, 76px);
+  font-weight: 900;
+  line-height: 1.06;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+}
+.hero h1 .gold {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(240,185,11,0.25));
+}
+.hero h1 .cream { color: var(--cream); }
+
+.hero-sub {
+  font-size: clamp(15px, 2.5vw, 18.5px);
+  color: var(--muted);
+  max-width: 580px;
+  margin: 0 auto 52px;
+  line-height: 1.7;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 52px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.hero-stat {
+  position: relative;
+  padding: 8px 0;
+}
+.hero-stat .big {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(42px, 6.5vw, 68px);
+  font-weight: 900;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  line-height: 1;
+  transition: transform 0.4s var(--ease-spring);
+}
+.hero-stat:hover .big { transform: scale(1.08); }
+.hero-stat .label {
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  margin-top: 8px;
+  max-width: 150px;
+}
+
+.hero-cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold-grad);
+  color: #0a0a0a;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 17px 36px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  letter-spacing: 0.03em;
+  box-shadow: 0 6px 28px rgba(240,185,11,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(240,185,11,0.45);
+}
+.btn-primary:hover::after { transform: translateX(100%); }
+.btn-secondary {
+  background: rgba(255,255,255,0.03);
+  color: var(--gold-lt);
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 17px 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  backdrop-filter: blur(8px);
+}
+.btn-secondary:hover {
+  border-color: var(--gold);
+  background: rgba(240,185,11,0.08);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   PAIN POINTS — Card depth
+═══════════════════════════════════════ */
+.pain-section { background: var(--surface); position: relative; }
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 16px;
+  margin-top: 52px;
+}
+.pain-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface3));
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border2);
+  position: relative;
+  transition: all 0.35s var(--ease-out);
+  overflow: hidden;
+}
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold-grad);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.pain-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(240,185,11,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 30px rgba(240,185,11,0.06);
+}
+.pain-card:hover::before { opacity: 1; }
+.pain-num {
+  font-family: 'Kanit', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: rgba(240,185,11,0.12);
+  line-height: 1;
+  margin-bottom: 14px;
+  display: block;
+  transition: color 0.3s;
+}
+.pain-card:hover .pain-num { color: rgba(240,185,11,0.22); }
+.pain-card h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 17px; font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--cream);
+}
+.pain-card p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.7; }
+
+/* ═══════════════════════════════════════
+   QUOTE
+═══════════════════════════════════════ */
+.quote-section { background: var(--black); padding: 0; position: relative; }
+.quote-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  text-align: center;
+}
+.quote-mark {
+  font-family: 'Kanit', sans-serif;
+  font-size: 140px;
+  line-height: 0.65;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.15;
+  display: block;
+  margin-bottom: 20px;
+}
+.quote-text {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(21px, 3.6vw, 32px);
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--white);
+  max-width: 740px;
+  margin: 0 auto 28px;
+}
+.quote-text .gold { color: var(--gold); }
+.quote-src { font-size: 13.5px; color: var(--muted2); }
+
+/* ═══════════════════════════════════════
+   LOSS CALCULATOR
+═══════════════════════════════════════ */
+.calc-box {
+  background: linear-gradient(160deg, var(--surface2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px;
+  margin-top: 44px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(240,185,11,0.06);
+}
+.calc-box::before {
+  content: 'คำนวณ';
+  position: absolute;
+  right: -8px; top: 8px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 90px;
+  font-weight: 900;
+  color: rgba(240,185,11,0.035);
+  pointer-events: none;
+}
+.calc-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--gold-lt);
+  margin-bottom: 28px;
+}
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border2);
+  font-size: 15px;
+}
+.calc-row:last-of-type { border-bottom: none; }
+.calc-row .label { color: var(--muted); }
+.calc-row .val {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 17px;
+}
+.calc-total {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calc-total .label {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+}
+.calc-total .val {
+  font-family: 'Kanit', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══════════════════════════════════════
+   COMPARISON TABLE
+═══════════════════════════════════════ */
+.compare-section { background: var(--surface); }
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border2);
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.compare-table thead tr th {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  padding: 18px 22px;
+}
+.compare-table thead tr th:first-child { text-align: left; color: var(--muted); font-size: 13px; }
+.compare-table th.col-no {
+  background: rgba(248,113,113,0.08);
+  color: #f87171;
+  text-align: center;
+}
+.compare-table th.col-yes {
+  background: rgba(240,185,11,0.1);
+  color: var(--gold);
+  text-align: center;
+}
+.compare-table td {
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--border2);
+  color: var(--muted);
+  transition: background 0.2s;
+}
+.compare-table tr:hover td { background: rgba(255,255,255,0.015); }
+.compare-table td:first-child { color: var(--white); font-weight: 600; }
+.compare-table td.center { text-align: center; }
+.compare-table tr:last-child td { border-bottom: none; }
+.tag-no { color: #f87171; font-weight: 700; font-size: 17px; }
+.tag-yes { color: var(--gold); font-weight: 700; font-size: 17px; }
+.compare-table small { display: block; font-size: 12px; margin-top: 4px; opacity: 0.8; }
+
+/* ═══════════════════════════════════════
+   BENEFITS
+═══════════════════════════════════════ */
+.benefit-list { margin-top: 52px; display: flex; flex-direction: column; gap: 4px; }
+.benefit-item {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border2);
+  transition: all 0.3s;
+}
+.benefit-item:last-child { border-bottom: none; }
+.benefit-item:hover { padding-left: 8px; }
+.b-num {
+  font-family: 'Kanit', sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 72px;
+  transition: transform 0.4s var(--ease-spring);
+}
+.benefit-item:hover .b-num { transform: scale(1.1); }
+.benefit-item h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 19.5px; font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--cream);
+}
+.benefit-item p { font-size: 15.5px; color: var(--muted); margin: 0; line-height: 1.75; }
+
+/* ═══════════════════════════════════════
+   LOGO PROMO BANNER
+═══════════════════════════════════════ */
+.logo-promo {
+  background: linear-gradient(135deg, #141000 0%, #080800 40%, #0c0a00 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.logo-promo::before {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(240,185,11,0.1), transparent 70%);
+  top: -100px; right: -50px;
+  filter: blur(40px);
+  pointer-events: none;
+}
+.logo-promo-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 72px 24px;
+  display: flex;
+  gap: 52px;
+  align-items: center;
+  position: relative;
+}
+.logo-promo-left { flex: 1; }
+.logo-promo-badge {
+  display: inline-block;
+  background: rgba(240,185,11,0.12);
+  border: 1px solid var(--border);
+  padding: 7px 18px;
+  border-radius: 100px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.logo-promo-left h2 {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.logo-promo-left h2 span { color: var(--gold); }
+.logo-promo-left p { color: var(--muted); font-size: 15.5px; margin-bottom: 26px; }
+.logo-promo-features { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.logo-promo-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.logo-promo-features li::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+  flex-shrink: 0;
+}
+.logo-promo-right { flex-shrink: 0; width: 230px; text-align: center; }
+.logo-promo-price {
+  background: linear-gradient(160deg, rgba(22,18,0,0.9), rgba(10,10,0,0.95));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 0 40px rgba(240,185,11,0.1);
+  transition: transform 0.4s var(--ease-spring);
+}
+.logo-promo-price:hover { transform: scale(1.04) rotate(-1deg); }
+.logo-promo-price .was {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: 6px;
+}
+.logo-promo-price .free-tag {
+  font-family: 'Kanit', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  line-height: 1.1;
+  filter: drop-shadow(0 0 20px rgba(240,185,11,0.3));
+}
+.logo-promo-price .cond {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 10px;
+  display: block;
+}
+
+/* ═══════════════════════════════════════
+   PACKAGES — 3D Card feel
+═══════════════════════════════════════ */
+.pkg-section { background: var(--surface); }
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 52px;
+  perspective: 1000px;
+}
+.pkg-card {
+  background: linear-gradient(165deg, #111111, #0a0a0a);
+  border: 1px solid var(--border2);
+  border-radius: 18px;
+  padding: 36px 30px;
+  position: relative;
+  transition: all 0.4s var(--ease-out);
+  transform-style: preserve-3d;
+}
+.pkg-card:hover {
+  border-color: rgba(240,185,11,0.35);
+  transform: translateY(-10px) rotateX(2deg);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(240,185,11,0.08);
+}
+.pkg-card.featured {
+  border-color: var(--gold);
+  background: linear-gradient(165deg, #161200, #0c0a00);
+  box-shadow: 0 0 50px rgba(240,185,11,0.12);
+}
+.pkg-card.featured:hover {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 60px rgba(240,185,11,0.18);
+}
+.pkg-badge-top {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold-grad);
+  color: #0a0a0a;
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px; font-weight: 800;
+  padding: 5px 16px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(240,185,11,0.35);
+}
+.pkg-tier {
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px; font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.pkg-name {
+  font-family: 'Kanit', sans-serif;
+  font-size: 26px; font-weight: 800;
+  margin-bottom: 6px;
+}
+.featured .pkg-name { color: var(--gold); }
+.pkg-desc { font-size: 13.5px; color: var(--muted); margin-bottom: 26px; }
+.pkg-list { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 30px; }
+.pkg-list li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.72);
+}
+.pkg-list li::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 11px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.pkg-price {
+  padding-top: 22px;
+  border-top: 1px solid var(--border2);
+  font-family: 'Kanit', sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+.pkg-price strong {
+  display: block;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--gold-lt);
+}
+
+/* ═══════════════════════════════════════
+   CTA SECTION
+═══════════════════════════════════════ */
+.cta-section { background: var(--black); position: relative; overflow: hidden; }
+.cta-section::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(240,185,11,0.08), transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 110px 24px;
+  position: relative;
+}
+.cta-inner h2 {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(30px, 5.2vw, 50px);
+  font-weight: 900;
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+.cta-inner h2 span { color: var(--gold); }
+.cta-inner p { color: var(--muted); font-size: 16.5px; margin-bottom: 40px; }
+.cta-note { font-size: 13.5px; color: var(--muted2); margin-top: 18px; }
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+.footer {
+  border-top: 1px solid var(--border2);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted2);
+  background: var(--black);
+}
+
+/* ═══════════════════════════════════════
+   STAFF PANEL
+═══════════════════════════════════════ */
+.staff-topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.staff-topbar-left {
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px; font-weight: 700;
+  color: var(--gold-lt);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.staff-badge {
+  background: rgba(240,185,11,0.15);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px; font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+}
+.staff-user { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+.btn-logout {
+  background: transparent;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px; font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-logout:hover { border-color: #f87171; color: #f87171; }
+
+.staff-tabs {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border2);
+  display: flex;
+  overflow-x: auto;
+  padding: 0 20px;
+  gap: 4px;
+}
+.staff-tab {
+  font-family: 'Kanit', sans-serif;
+  font-size: 13px; font-weight: 600;
+  padding: 15px 18px;
+  cursor: pointer;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s;
+  user-select: none;
+}
+.staff-tab:hover { color: var(--gold-lt); }
+.staff-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.staff-panel { display: none; }
+.staff-panel.active { display: block; animation: fadeIn 0.35s ease; }
+
+.s-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 52px 24px;
+}
+.s-eyebrow {
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.s-h2 {
+  font-family: 'Kanit', sans-serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+.s-p { color: var(--muted); margin-bottom: 14px; font-size: 15.5px; }
+.s-divider { border: none; border-top: 1px solid var(--border2); margin: 44px 0; }
+
+.target-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.target-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  padding: 26px;
+  transition: all 0.3s;
+}
+.target-card:hover {
+  border-color: rgba(240,185,11,0.25);
+  transform: translateY(-4px);
+}
+.t-badge {
+  display: inline-block;
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px; font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+  letter-spacing: 0.06em;
+}
+.badge-a { background: rgba(110,231,183,0.1); color: #6ee7b7; border: 1px solid rgba(110,231,183,0.2); }
+.badge-b { background: rgba(147,197,253,0.1); color: #93c5fd; border: 1px solid rgba(147,197,253,0.2); }
+.badge-c { background: rgba(253,224,132,0.1); color: #fde047; border: 1px solid rgba(253,224,132,0.2); }
+.target-card h3 { font-family: 'Kanit', sans-serif; font-size: 15px; font-weight: 700; color: var(--cream); margin-bottom: 12px; }
+.target-card ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.target-card ul li {
+  font-size: 13.5px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+}
+.target-card ul li::before { content: '›'; color: var(--gold); font-weight: 700; }
+.profit-tag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+}
+
+.s-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 14px;
+  transition: border-color 0.25s;
+}
+.s-card:hover { border-color: rgba(240,185,11,0.2); }
+.s-card.gold-left { border-left: 3px solid var(--gold); }
+.s-card h3 { font-family: 'Kanit', sans-serif; font-weight: 700; font-size: 16px; color: var(--cream); margin-bottom: 8px; }
+.s-card p { font-size: 14.5px; color: var(--muted); margin: 0; }
+
+.script-block {
+  background: rgba(240,185,11,0.04);
+  border: 1px solid rgba(240,185,11,0.15);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin: 14px 0;
+  position: relative;
+}
+.script-tag {
+  position: absolute;
+  top: -11px; left: 16px;
+  background: var(--gold-grad);
+  color: #0a0a0a;
+  font-size: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  padding: 3px 11px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+}
+.script-block p {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 14.5px;
+  margin: 0;
+  line-height: 1.85;
+}
+.script-block p strong { font-style: normal; color: var(--gold-lt); }
+
+.obj-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  transition: border-color 0.25s;
+}
+.obj-card:hover { border-color: rgba(240,185,11,0.2); }
+.obj-q {
+  background: rgba(248,113,113,0.06);
+  padding: 15px 20px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #f87171;
+  display: flex;
+  gap: 8px;
+}
+.obj-a {
+  padding: 18px 20px;
+  font-size: 14.5px;
+  color: var(--muted);
+  border-top: 1px solid var(--border2);
+}
+.obj-a .tip-tag {
+  display: inline-block;
+  margin-top: 12px;
+  background: rgba(110,231,183,0.08);
+  border: 1px solid rgba(110,231,183,0.2);
+  color: #6ee7b7;
+  font-size: 12px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+.obj-a em { color: var(--cream); font-style: italic; }
+
+.close-strategy {
+  background: linear-gradient(145deg, #141000, #0a0a00);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px;
+  margin-top: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.close-strategy::before {
+  content: '90%';
+  position: absolute;
+  right: -15px; bottom: -25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 150px;
+  font-weight: 900;
+  color: rgba(240,185,11,0.04);
+  pointer-events: none;
+  line-height: 1;
+}
+.close-strategy h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.strategy-steps { display: flex; flex-direction: column; gap: 18px; }
+.s-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.s-step-num {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--gold-grad);
+  color: #0a0a0a;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 0 12px rgba(240,185,11,0.3);
+}
+.s-step-body h4 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+.s-step-body p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+.flow { display: flex; flex-direction: column; margin-top: 28px; }
+.flow-step {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+}
+.flow-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 44px;
+  flex-shrink: 0;
+}
+.flow-dot {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--gold-grad);
+  color: #0a0a0a;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(240,185,11,0.3);
+}
+.flow-line {
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  flex: 1;
+  margin: 4px 0;
+  opacity: 0.4;
+}
+.flow-step:last-child .flow-line { display: none; }
+.flow-body {
+  padding: 0 0 36px 20px;
+  flex: 1;
+}
+.flow-time {
+  display: inline-block;
+  font-size: 11px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(240,185,11,0.08);
+  border: 1px solid var(--border);
+  padding: 3px 12px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+.flow-body h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 5px;
+}
+.flow-body p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+.kpi-table { width: 100%; border-collapse: collapse; margin-top: 22px; border-radius: 12px; overflow: hidden; }
+.kpi-table th {
+  background: rgba(240,185,11,0.1);
+  color: var(--gold);
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 13px 16px;
+  text-align: left;
+  letter-spacing: 0.06em;
+}
+.kpi-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border2);
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.kpi-table tr:last-child td { border-bottom: none; }
+.kpi-table td:first-child { font-weight: 600; color: var(--cream); }
+.kpi-table td:nth-child(2) { color: var(--gold-lt); font-family: 'Kanit', sans-serif; font-weight: 700; }
+
+.checklist { list-style: none; margin-top: 16px; }
+.checklist li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border2);
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.checklist li:last-child { border-bottom: none; }
+.check-box {
+  width: 22px; height: 22px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+.check-box:hover { border-color: var(--gold); background: rgba(240,185,11,0.08); }
+.check-box.done { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 10px rgba(240,185,11,0.3); }
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.tip-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.tip-card:hover {
+  border-color: rgba(240,185,11,0.3);
+  transform: translateY(-4px);
+}
+.tip-icon { font-size: 30px; margin-bottom: 12px; display: block; }
+.tip-card h3 { font-family: 'Kanit', sans-serif; font-size: 14px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+.tip-card p { font-size: 12.5px; color: var(--muted); margin: 0; }
+
+.varbee-box {
+  background: linear-gradient(145deg, #120e00, #0a0a00);
+  border: 1px solid var(--gold);
+  border-radius: 18px;
+  padding: 40px;
+  margin-top: 28px;
+  box-shadow: 0 0 50px rgba(240,185,11,0.08);
+}
+.varbee-box h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.varbee-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.varbee-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  color: var(--muted);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border2);
+}
+.varbee-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.varbee-list li .icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+.varbee-list li strong { color: var(--gold-lt); }
+
+/* ═══════════════════════════════════════
+   HAMBURGER MENU (mobile)
+═══════════════════════════════════════ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger:hover { background: rgba(240,185,11,0.1); }
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: all 0.3s var(--ease-out);
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: 69px;
+  left: 0; right: 0;
+  background: rgba(8,8,8,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px 28px;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 850;
+  animation: drawerIn 0.25s var(--ease-out);
+}
+.nav-drawer.open { display: flex; }
+@keyframes drawerIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-drawer .nav-btn {
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 15px;
+  min-height: 44px;
+}
+
+/* ═══════════════════════════════════════
+   WORKING APPROACH — 4 cards
+═══════════════════════════════════════ */
+.approach-section { background: var(--black); }
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 52px;
+}
+.approach-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 32px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s var(--ease-out);
+}
+.approach-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold-grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-out);
+}
+.approach-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(240,185,11,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 30px rgba(240,185,11,0.06);
+}
+.approach-card:hover::after { transform: scaleX(1); }
+.approach-icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+.approach-card h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 17px; font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.approach-card p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.75; }
+
+/* ═══════════════════════════════════════
+   PROCESS — 8-step vertical timeline
+═══════════════════════════════════════ */
+.process-section { background: var(--surface); }
+
+/* ═══════════════════════════════════════
+   CONCEPTS — 5 concept cards
+═══════════════════════════════════════ */
+.concepts-section { background: var(--black); }
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 52px;
+}
+.concept-card {
+  background: linear-gradient(165deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s var(--ease-out);
+  cursor: default;
+}
+.concept-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold-grad);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.concept-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(240,185,11,0.35);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.38), 0 0 32px rgba(240,185,11,0.07);
+}
+.concept-card:hover::before { opacity: 1; }
+.concept-icon { font-size: 32px; display: block; margin-bottom: 14px; line-height: 1; }
+.concept-name {
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px; font-weight: 800;
+  color: var(--gold-lt);
+  margin-bottom: 4px;
+}
+.concept-target { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+.concept-features { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.concept-features li {
+  font-size: 12.5px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.concept-features li::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 9px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════
+   FUNCTION TABLE — feature comparison
+═══════════════════════════════════════ */
+.func-section { background: var(--surface); }
+.func-table-wrap {
+  overflow-x: auto;
+  margin-top: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border2);
+}
+.func-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  min-width: 500px;
+}
+.func-table thead th {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  background: var(--surface2);
+}
+.func-table thead th:first-child { text-align: left; color: var(--muted); }
+.func-table thead th.th-basic  { color: var(--muted); background: var(--surface2); }
+.func-table thead th.th-growth { color: var(--gold); background: rgba(240,185,11,0.07); }
+.func-table thead th.th-premium{ color: var(--gold-lt); background: rgba(240,185,11,0.12); }
+.func-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border2);
+  color: var(--muted);
+  transition: background 0.2s;
+}
+.func-table tbody tr:hover td { background: rgba(255,255,255,0.015); }
+.func-table tbody td:first-child { color: var(--white); font-weight: 600; }
+.func-table tbody td:not(:first-child) { text-align: center; }
+.func-table tbody tr:last-child td { border-bottom: none; }
+.func-yes { color: var(--gold); font-size: 16px; font-weight: 700; }
+.func-no  { color: rgba(255,255,255,0.18); font-size: 16px; }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 700px) {
+  .navbar { padding: 12px 16px; }
+  .nav-actions { display: none; }
+  .hamburger { display: flex; }
+  .hero-stats { gap: 32px; }
+  .benefit-item { flex-direction: column; gap: 10px; }
+  .b-num { width: auto; font-size: 44px; }
+  .logo-promo-inner { flex-direction: column; }
+  .logo-promo-right { width: 100%; }
+  .modal { padding: 28px 20px; }
+  .s-wrap { padding: 36px 16px; }
+  .pkg-card:hover { transform: translateY(-6px); }
+  .approach-grid { grid-template-columns: 1fr; }
+  .concepts-grid { grid-template-columns: repeat(2, 1fr); }
+  .concept-card { padding: 22px 16px; }
+  .func-table thead th, .func-table tbody td { padding: 12px 14px; }
+  .nav-btn { min-height: 44px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ NAVBAR ═══════════════════════════════════════ -->
+<nav class="navbar" id="mainNav">
+  <div class="nav-brand">
+    <img src="https://i.ibb.co/PZBxp544/TCC-Marketplace-Logo.png" alt="WDM Logo" class="nav-logo"
+         onerror="this.style.display='none';document.getElementById('navLogoFallback').style.display='flex'">
+    <div id="navLogoFallback" class="nav-logo-fallback" style="display:none">WD</div>
+    <span class="nav-title">Web Design <span>Marketing</span></span>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-btn nav-btn-ghost" onclick="openModal('login')">เข้าสู่ระบบ Staff</button>
+    <button class="nav-btn nav-btn-gold" onclick="document.getElementById('cta-section').scrollIntoView({behavior:'smooth'})">ปรึกษาฟรี</button>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="เมนู" onclick="toggleDrawer()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-btn nav-btn-ghost" onclick="openModal('login');closeDrawer()">เข้าสู่ระบบ Staff</button>
+  <button class="nav-btn nav-btn-gold" onclick="document.getElementById('cta-section').scrollIntoView({behavior:'smooth'});closeDrawer()">ปรึกษาฟรี</button>
+</div>
+
+<div class="gold-line"></div>
+
+<!-- ═══════════════════════════════════════ CUSTOMER VIEW ═══════════════════════════════════════ -->
+<div id="customer-view" class="view active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-orb o1"></div>
+    <div class="hero-bg-orb o2"></div>
+    <div class="hero-bg-orb o3"></div>
+
+    <div class="hero-badge reveal">Web Design Marketing · Premium Service</div>
+
+    <h1 class="reveal reveal-delay-1" id="hero-h1">
+      เว็บไซต์ที่<br>
+      <span class="gold">ทำงานแทนคุณ</span><br>
+      <span class="cream">ตลอด 24 ชั่วโมง</span>
+    </h1>
+
+    <p class="hero-sub reveal reveal-delay-2">
+      ไม่ใช่แค่ความสวยงาม — แต่คือระบบที่ดึงลูกค้าเข้าร้าน สร้างความน่าเชื่อถือ และเพิ่มยอดขายได้จริงทุกวัน
+    </p>
+
+    <div class="hero-stats reveal reveal-delay-3">
+      <div class="hero-stat">
+        <span class="big" id="stat1-num">93%</span>
+        <span class="label" id="stat1-label">ลูกค้าค้นหาร้านผ่านอินเทอร์เน็ตก่อนตัดสินใจซื้อ</span>
+      </div>
+      <div class="hero-stat">
+        <span class="big" id="stat2-num">75%</span>
+        <span class="label" id="stat2-label">มองว่าร้านที่ไม่มีเว็บ "ดูไม่น่าเชื่อถือ"</span>
+      </div>
+      <div class="hero-stat">
+        <span class="big" id="stat3-num">24/7</span>
+        <span class="label" id="stat3-label">เว็บไซต์รับลูกค้าแม้คุณนอนหลับอยู่</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-row reveal reveal-delay-4">
+      <button class="btn-primary" data-cta="hero" onclick="document.getElementById('cta-section').scrollIntoView({behavior:'smooth'})">ขอดู Mockup ฟรี</button>
+      <button class="btn-secondary" data-cta="hero" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">ดูแพ็กเกจ</button>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- PAIN POINTS -->
+  <section class="pain-section">
+    <div class="wrap">
+      <span class="eyebrow reveal">ปัญหาที่เจ้าของร้านเจอบ่อย</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal">คุณกำลัง<span>เสียลูกค้า</span><br>โดยไม่รู้ตัวอยู่ไหม?</h2>
+      <p class="section-p reveal">สิ่งเหล่านี้เกิดขึ้นทุกวัน — เงินหลุดมืออย่างเงียบๆ โดยที่ร้านยังเปิดอยู่ตามปกติ</p>
+
+      <div class="pain-grid">
+        <div class="pain-card reveal" data-pain="p1">
+          <span class="pain-num">01</span>
+          <h3>ลูกค้าหาร้านไม่เจอ</h3>
+          <p>พิมพ์ชื่อร้านใน Google แล้วไม่ขึ้น คู่แข่งขึ้นแทน ลูกค้าก็โทรหาคู่แข่งทันที</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-1" data-pain="p2">
+          <span class="pain-num">02</span>
+          <h3>มีแค่ Facebook ก็พอ?</h3>
+          <p>Facebook อัลกอริธึมเปลี่ยนตลอด โพสต์เข้าไม่ถึงลูกค้า และคุณไม่ได้เป็นเจ้าของข้อมูลนั้น</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-2" data-pain="p3">
+          <span class="pain-num">03</span>
+          <h3>หลังร้านปิดก็หมดโอกาส</h3>
+          <p>ลูกค้าค้นหาช่วงดึกหรือวันหยุด แต่ไม่มีที่ให้เขาดูข้อมูลหรือจองล่วงหน้า</p>
+        </div>
+        <div class="pain-card reveal" data-pain="p4">
+          <span class="pain-num">04</span>
+          <h3>คู่แข่งโตเร็วกว่าทุกปี</h3>
+          <p>ร้านข้างๆ มีเว็บ มีรีวิว มีระบบจองออนไลน์ แล้วทำไมลูกค้าถึงเลือกไปร้านนั้นก่อน?</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-1" data-pain="p5">
+          <span class="pain-num">05</span>
+          <h3>ต้องตอบคำถามซ้ำๆ ทุกวัน</h3>
+          <p>ราคาเท่าไหร่? เปิดกี่โมง? มีบริการอะไรบ้าง? — ถ้ามีเว็บ ลูกค้าหาเองได้ทันที</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-2" data-pain="p6">
+          <span class="pain-num">06</span>
+          <h3>โฆษณาแพงแต่ไม่คุ้มค่า</h3>
+          <p>ยิงแอดแล้วลูกค้าคลิก แต่ไม่มีหน้าเว็บรองรับ เหมือนเทน้ำใส่ตะกร้า</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- REALITY QUOTE -->
+  <section class="quote-section">
+    <div class="quote-inner">
+      <span class="quote-mark reveal">&ldquo;</span>
+      <p class="quote-text reveal">
+        ถ้าลูกค้า <span class="gold">10 คน</span> ค้นหาสินค้าที่คุณขาย<br>
+        แต่หาร้านคุณไม่เจอ — นั่นแปลว่าคุณ<span class="gold">เสียรายได้ 10 คน</span><br>
+        โดยที่ยังไม่รู้ตัวด้วยซ้ำ
+      </p>
+      <p class="quote-src reveal">— ความจริงที่เกิดขึ้นกับร้านที่ไม่มี Online Presence ที่ชัดเจน</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- LOSS CALCULATOR -->
+  <section style="background: var(--surface);">
+    <div class="wrap">
+      <span class="eyebrow reveal">ความจริงที่คำนวณได้</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal">ลูกค้าตัดสินใจใน <span>8 วินาที</span></h2>
+      <p class="section-p reveal">ถ้าเขาหาข้อมูลร้านคุณไม่เจอในเวลานั้น — เขาไปร้านถัดไปทันที ไม่รอ</p>
+
+      <div class="calc-box reveal">
+        <div class="calc-title">🧮 ลองคำนวณดู — เงินที่หลุดไปทุกเดือน</div>
+        <div class="calc-row">
+          <span class="label">ลูกค้าที่ค้นหาผ่านออนไลน์เฉลี่ยต่อวัน</span>
+          <span class="val">5 คน</span>
+        </div>
+        <div class="calc-row">
+          <span class="label">ยอดซื้อเฉลี่ยต่อคน</span>
+          <span class="val">500 บาท</span>
+        </div>
+        <div class="calc-row">
+          <span class="label">สัดส่วนลูกค้าที่หาร้านไม่เจอแล้วเลิกสนใจ</span>
+          <span class="val">~60%</span>
+        </div>
+        <div class="calc-total">
+          <span class="label">รายได้ที่หลุดมือทุกเดือน</span>
+          <span class="val">≈ 45,000 บาท</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- COMPARISON TABLE -->
+  <section class="compare-section" id="compare">
+    <div class="wrap">
+      <span class="eyebrow reveal">เปรียบเทียบ</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal">ร้านที่<span>มีเว็บ</span> vs ร้านที่<span>ไม่มี</span></h2>
+      <p class="section-p reveal">ดูตารางนี้แล้วจะเข้าใจทันทีว่าทำไมลูกค้าถึงเลือกคู่แข่งก่อน</p>
+
+      <div class="table-wrap reveal">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>สถานการณ์</th>
+              <th class="col-no">✗ ไม่มีเว็บ</th>
+              <th class="col-yes">✦ มีเว็บไซต์</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ลูกค้าค้นหา Google ตี 2</td>
+              <td class="center"><span class="tag-no">✗</span><br><small>หาร้านไม่เจอ</small></td>
+              <td class="center"><span class="tag-yes">✦</span><br><small>เจอเลย พร้อมจอง</small></td>
+            </tr>
+            <tr>
+              <td>ลูกค้าอยากรู้ราคาก่อน</td>
+              <td class="center"><span class="tag-no">✗</span><br><small>ต้องโทรถาม รอนาน</small></td>
+              <td class="center"><span class="tag-yes">✦</span><br><small>ดูราคาได้ 24 ชม.</small></td>
+            </tr>
+            <tr>
+              <td>ลูกค้าอยากดูรีวิวก่อนตัดสินใจ</td>
+              <td class="center"><span class="tag-no">✗</span><br><small>หาไม่เจอ ไม่กล้าใช้</small></td>
+              <td class="center"><span class="tag-yes">✦</span><br><small>รีวิวอยู่ในเว็บ ตัดสินใจง่าย</small></td>
+            </tr>
+            <tr>
+              <td>ยิงโฆษณา Google / Facebook Ads</td>
+              <td class="center"><span class="tag-no">✗</span><br><small>ไม่มีที่รองรับ เงินหาย</small></td>
+              <td class="center"><span class="tag-yes">✦</span><br><small>ส่งไป Landing Page ปิดยอดได้</small></td>
+            </tr>
+            <tr>
+              <td>ลูกค้าต่างจังหวัดอยากรู้จักร้าน</td>
+              <td class="center"><span class="tag-no">✗</span><br><small>ไม่รู้ว่ามีร้านนี้อยู่</small></td>
+              <td class="center"><span class="tag-yes">✦</span><br><small>เจอบน Google ทันที</small></td>
+            </tr>
+            <tr>
+              <td>ความน่าเชื่อถือในสายตาลูกค้า</td>
+              <td class="center"><span class="tag-no">✗</span><br><small>ดูไม่มืออาชีพ</small></td>
+              <td class="center"><span class="tag-yes">✦</span><br><small>มั่นใจ น่าเชื่อถือกว่า</small></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- BENEFITS -->
+  <section style="background: var(--black);">
+    <div class="wrap">
+      <span class="eyebrow reveal">ประโยชน์ที่จับต้องได้</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal">เว็บไซต์ดีๆ<br><span>ทำงานแทนคุณ</span>ได้จริงทุกวัน</h2>
+      <p class="section-p reveal">ไม่ใช่แค่ "มีให้ดู" — แต่เป็นระบบที่สร้างรายได้ให้คุณแม้ร้านปิดแล้ว</p>
+
+      <div class="benefit-list">
+        <div class="benefit-item reveal">
+          <div class="b-num">1</div>
+          <div>
+            <h3>รับลูกค้าใหม่จาก Google ทุกวัน — โดยไม่ต้องยิงโฆษณา</h3>
+            <p>ลูกค้าที่ไม่รู้จักร้านคุณค้นหา "ร้านซ่อมแอร์ใกล้ฉัน" หรือ "คาเฟ่นนทบุรี" — ถ้าร้านคุณขึ้น Google เขาก็เดินเข้ามาเองได้เลย</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="b-num">2</div>
+          <div>
+            <h3>รับจองและสอบถามตลอด 24 ชั่วโมง แม้คุณนอนหลับอยู่</h3>
+            <p>ฟอร์มจองออนไลน์ทำงานไม่หยุด ลูกค้ากดจองได้ตอนดึก คุณตื่นมาเจอรายการรอแล้ว ไม่พลาดโอกาสขายแม้แต่ครั้งเดียว</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="b-num">3</div>
+          <div>
+            <h3>สร้างความน่าเชื่อถือแบบที่ Facebook ทำไม่ได้</h3>
+            <p>เว็บไซต์คือบ้านของแบรนด์คุณ — ใส่รีวิว ผลงาน ใบรับรอง ทีมงาน ลูกค้าเห็นแล้วตัดสินใจง่ายขึ้นทันที</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="b-num">4</div>
+          <div>
+            <h3>ลดงานซ้ำซาก ประหยัดเวลาคุณและทีมได้มหาศาล</h3>
+            <p>ราคา? ดูในเว็บ — เวลาเปิด? ดูในเว็บ — บริการมีอะไร? ดูในเว็บ คุณไม่ต้องตอบคำถามเดิมซ้ำๆ ทั้งวันอีกต่อไป</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="b-num">5</div>
+          <div>
+            <h3>ทำให้โฆษณาทุกบาทได้ผลขึ้นหลายเท่า</h3>
+            <p>ยิง Google Ads หรือ Facebook Ads แล้วส่งลูกค้าไปหน้าเว็บที่ออกแบบมาเพื่อปิดการขายโดยเฉพาะ — แปลงงบโฆษณาให้เป็นยอดขายจริงๆ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- LOGO PROMO -->
+  <section class="logo-promo">
+    <div class="logo-promo-inner">
+      <div class="logo-promo-left">
+        <div class="logo-promo-badge reveal">🎁 โปรโมชั่นพิเศษ</div>
+        <h2 class="reveal">ออกแบบโลโก้ฟรี<br><span>สำหรับลูกค้าใหม่ทุกราย</span></h2>
+        <p class="reveal">ยังไม่มีโลโก้? หรืออยากได้โลโก้ใหม่ที่ดูเป็นมืออาชีพกว่าเดิม? เราออกแบบให้ฟรีเมื่อสั่งทำเว็บไซต์กับเรา ไม่มีค่าใช้จ่ายเพิ่มเติม</p>
+        <ul class="logo-promo-features reveal">
+          <li>ออกแบบโลโก้ตามสไตล์และธุรกิจของคุณ</li>
+          <li>ได้ไฟล์ PNG, JPG และ Vector (AI/SVG) ครบชุด</li>
+          <li>แก้ไขได้ 3 รอบจนพอใจ</li>
+          <li>ใช้โลโก้ได้ทันทีทั้งออนไลน์และออฟไลน์</li>
+          <li>มูลค่าปกติ 3,000–8,000 บาท — ฟรีสำหรับลูกค้าเว็บ</li>
+        </ul>
+      </div>
+      <div class="logo-promo-right reveal">
+        <div class="logo-promo-price">
+          <span class="was">มูลค่าปกติ 3,000–8,000 บาท</span>
+          <span class="free-tag">ฟรี</span>
+          <span class="cond">เมื่อสั่งทำเว็บไซต์ทุกแพ็กเกจ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- PACKAGES -->
+  <section class="pkg-section" id="packages">
+    <div class="wrap-wide">
+      <div style="text-align:center; margin-bottom: 8px;">
+        <span class="eyebrow reveal">แพ็กเกจบริการ</span>
+      </div>
+      <div style="text-align:center;">
+        <span class="gold-line-short reveal" style="margin: 0 auto 20px;"></span>
+        <h2 class="section-h reveal" style="text-align:center;">เลือกแพ็กเกจ<span>ที่เหมาะกับร้านคุณ</span></h2>
+        <p class="section-p reveal" style="text-align:center; margin: 0 auto 8px;">ทุกแพ็กเกจรับออกแบบโลโก้ฟรี และ Mockup ดูก่อนโดยไม่มีค่าใช้จ่าย</p>
+      </div>
+
+      <div class="pkg-grid">
+        <div class="pkg-card reveal">
+          <div class="pkg-tier">ระดับเริ่มต้น</div>
+          <div class="pkg-name">Basic</div>
+          <div class="pkg-desc">สำหรับร้านที่เพิ่งเริ่มต้นออนไลน์</div>
+          <ul class="pkg-list">
+            <li>หน้าแรก + เกี่ยวกับเรา + ติดต่อ</li>
+            <li>รองรับมือถือ 100%</li>
+            <li>Google Map ฝังในเว็บ</li>
+            <li>ปุ่ม LINE / โทรด่วน</li>
+            <li>SEO พื้นฐาน ติด Google</li>
+            <li>ส่งมอบภายใน 7–10 วัน</li>
+            <li><strong style="color:var(--gold)">ออกแบบโลโก้ฟรี ✦</strong></li>
+          </ul>
+          <div class="pkg-price">
+            <strong>สอบถามราคา</strong>
+            ไม่มีค่าใช้จ่ายซ่อนเร้น
+          </div>
+        </div>
+
+        <div class="pkg-card featured reveal reveal-delay-1" data-pkg="pkg2">
+          <div class="pkg-badge-top">✦ แนะนำสำหรับร้านที่ต้องการยอดขาย</div>
+          <div class="pkg-tier">ระดับยอดนิยม</div>
+          <div class="pkg-name">Growth</div>
+          <div class="pkg-desc">สำหรับร้านที่ต้องการลูกค้าจริงและยอดขายจริง</div>
+          <ul class="pkg-list">
+            <li>ทุกอย่างใน Basic</li>
+            <li>ระบบจองออนไลน์ / ตะกร้าสินค้า</li>
+            <li>แกลเลอรี่ผลงาน / Before-After</li>
+            <li>รีวิวลูกค้าแสดงในเว็บ</li>
+            <li>เชื่อม Line OA โดยตรง</li>
+            <li>โปรโมชั่นหน้าแรก อัปเดตได้</li>
+            <li><strong style="color:var(--gold)">ออกแบบโลโก้ฟรี ✦</strong></li>
+          </ul>
+          <div class="pkg-price">
+            <strong>สอบถามราคา</strong>
+            ยอดนิยมสูงสุด
+          </div>
+        </div>
+
+        <div class="pkg-card reveal reveal-delay-2">
+          <div class="pkg-tier">ระดับพรีเมียม</div>
+          <div class="pkg-name">Premium</div>
+          <div class="pkg-desc">สำหรับธุรกิจที่ต้องการระบบครบจบในที่เดียว</div>
+          <ul class="pkg-list">
+            <li>ทุกอย่างใน Growth</li>
+            <li>ชำระเงินออนไลน์ (QR / บัตร)</li>
+            <li>ระบบสมาชิก + คูปองส่วนลด</li>
+            <li>Analytics Dashboard วัดผลได้</li>
+            <li>ติดตามออเดอร์แบบ Real-time</li>
+            <li>ดูแลรายเดือน ไม่ต้องจ้างทีม IT</li>
+            <li><strong style="color:var(--gold)">ออกแบบโลโก้ฟรี ✦</strong></li>
+          </ul>
+          <div class="pkg-price">
+            <strong>สอบถามราคา</strong>
+            ระบบครบ ดูแลตลอด
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- WORKING APPROACH — 4 cards -->
+  <section class="approach-section" id="approach">
+    <div class="wrap">
+      <span class="eyebrow reveal" id="wa-eyebrow">แนวทางการทำงาน</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal" id="wa-heading">แนวทางการทำงานของเรา</h2>
+      <p class="section-p reveal" id="wa-sub">ทุกโปรเจกต์ผ่านกระบวนการที่พิสูจน์แล้วว่าได้ผล</p>
+      <div class="approach-grid" id="wa-grid">
+        <div class="approach-card reveal" data-wa="wa1">
+          <span class="approach-icon">🎯</span>
+          <h3>มุ่งเน้นผลลัพธ์ธุรกิจ</h3>
+          <p>เราไม่ได้ทำเว็บเพื่อให้สวยอย่างเดียว แต่ออกแบบทุก element เพื่อให้ลูกค้าตัดสินใจซื้อ</p>
+        </div>
+        <div class="approach-card reveal reveal-delay-1" data-wa="wa2">
+          <span class="approach-icon">📐</span>
+          <h3>ออกแบบตามตัวตนธุรกิจ</h3>
+          <p>ไม่ใช้ template สำเร็จรูป — ทุกเว็บออกแบบตามแบรนด์และกลุ่มเป้าหมายของคุณโดยเฉพาะ</p>
+        </div>
+        <div class="approach-card reveal reveal-delay-2" data-wa="wa3">
+          <span class="approach-icon">🚀</span>
+          <h3>เปิดตัวรวดเร็ว ไม่รอนาน</h3>
+          <p>ระบบงานที่ชัดเจนทำให้เราส่งมอบงานได้ใน 7–14 วัน ไม่ดึงเวลาคุณไม่จำเป็น</p>
+        </div>
+        <div class="approach-card reveal reveal-delay-3" data-wa="wa4">
+          <span class="approach-icon">🔧</span>
+          <h3>ดูแลหลังส่งมอบจริง</h3>
+          <p>ไม่ทิ้งงาน — มีทีม support แก้ไขปรับปรุงและให้คำปรึกษาต่อเนื่อง</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- PROCESS — 8-step vertical timeline -->
+  <section class="process-section" id="process">
+    <div class="wrap">
+      <span class="eyebrow reveal">ขั้นตอนการทำงาน</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal" id="proc-heading">กระบวนการทำงาน 8 ขั้นตอน</h2>
+      <p class="section-p reveal" id="proc-sub">โปร่งใส ติดตามได้ตลอด ไม่มีเซอร์ไพรส์</p>
+
+      <div class="flow reveal" id="proc-flow">
+        <div class="flow-step" data-proc="s1">
+          <div class="flow-left"><div class="flow-dot">1</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 1</span>
+            <h3>Discovery — รับ Brief &amp; วิเคราะห์ธุรกิจ</h3>
+            <p>คุยเรื่องธุรกิจ กลุ่มเป้าหมาย คู่แข่ง และเป้าหมายที่ต้องการ</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s2">
+          <div class="flow-left"><div class="flow-dot">2</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 2–3</span>
+            <h3>Strategy &amp; Sitemap</h3>
+            <p>วางแผน sitemap หน้าเว็บ เนื้อหาที่ต้องมี และ user journey</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s3">
+          <div class="flow-left"><div class="flow-dot">3</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 3–5</span>
+            <h3>Wireframe / Mockup</h3>
+            <p>สร้างภาพตัวอย่างเว็บจริงให้ดูและอนุมัติก่อนลงมือพัฒนา</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s4">
+          <div class="flow-left"><div class="flow-dot">4</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 5–6</span>
+            <h3>Visual Design (UI)</h3>
+            <p>ออกแบบสีสัน typography และ visual identity ให้ตรงแบรนด์</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s5">
+          <div class="flow-left"><div class="flow-dot">5</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 6–10</span>
+            <h3>Development</h3>
+            <p>พัฒนาเว็บตาม Design ที่อนุมัติแล้ว ทั้ง desktop และมือถือ</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s6">
+          <div class="flow-left"><div class="flow-dot">6</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 10–11</span>
+            <h3>Content &amp; SEO พื้นฐาน</h3>
+            <p>ใส่ข้อความ รูปภาพ และปรับ SEO title / description / heading</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s7">
+          <div class="flow-left"><div class="flow-dot">7</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 12–13</span>
+            <h3>Testing + QA</h3>
+            <p>ทดสอบบนมือถือ tablet desktop ทุก browser ครบทุก function</p>
+          </div>
+        </div>
+        <div class="flow-step" data-proc="s8">
+          <div class="flow-left"><div class="flow-dot">8</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">วันที่ 14</span>
+            <h3>Launch + Training</h3>
+            <p>ส่ง domain + hosting สอนใช้งาน และเปิดให้บริการ Maintenance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- CONCEPTS — 5 concept cards -->
+  <section class="concepts-section" id="concepts">
+    <div class="wrap-wide">
+      <span class="eyebrow reveal">ตัวอย่างผลงาน</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal" id="con-heading">คอนเซ็ปต์เว็บที่เราทำได้</h2>
+      <p class="section-p reveal" id="con-sub">ตัวอย่างแนวทางการออกแบบสำหรับแต่ละประเภทธุรกิจ</p>
+      <div class="concepts-grid" id="con-grid">
+        <div class="concept-card reveal" data-con="c1">
+          <span class="concept-icon">🏥</span>
+          <div class="concept-name">Clinic &amp; Beauty</div>
+          <div class="concept-target">คลินิก สปา ร้านความงาม</div>
+          <ul class="concept-features">
+            <li>จองคิวออนไลน์</li><li>แสดงผลก่อน-หลัง</li>
+            <li>รีวิวจากลูกค้าจริง</li><li>ราคาโปรแกรมชัดเจน</li>
+          </ul>
+        </div>
+        <div class="concept-card reveal reveal-delay-1" data-con="c2">
+          <span class="concept-icon">🍽️</span>
+          <div class="concept-name">Restaurant &amp; Cafe</div>
+          <div class="concept-target">ร้านอาหาร คาเฟ่ เบเกอรี่</div>
+          <ul class="concept-features">
+            <li>เมนูรูปสวย</li><li>จองโต๊ะออนไลน์</li>
+            <li>โปรโมชั่นหน้าแรก</li><li>แผนที่และเวลาเปิด</li>
+          </ul>
+        </div>
+        <div class="concept-card reveal reveal-delay-2" data-con="c3">
+          <span class="concept-icon">🏨</span>
+          <div class="concept-name">Hotel &amp; Resort</div>
+          <div class="concept-target">โรงแรม รีสอร์ท ที่พัก</div>
+          <ul class="concept-features">
+            <li>ระบบจองห้องพัก</li><li>แกลเลอรี่รูปสวย</li>
+            <li>แพ็กเกจและราคา</li><li>Google Map</li>
+          </ul>
+        </div>
+        <div class="concept-card reveal reveal-delay-3" data-con="c4">
+          <span class="concept-icon">🛍️</span>
+          <div class="concept-name">E-Commerce &amp; Shop</div>
+          <div class="concept-target">ร้านค้าออนไลน์ แฟชั่น สินค้า</div>
+          <ul class="concept-features">
+            <li>ตะกร้าสินค้า</li><li>ชำระเงินออนไลน์</li>
+            <li>ระบบสมาชิก</li><li>โปรโมชั่นและคูปอง</li>
+          </ul>
+        </div>
+        <div class="concept-card reveal reveal-delay-4" data-con="c5">
+          <span class="concept-icon">⚖️</span>
+          <div class="concept-name">Professional Services</div>
+          <div class="concept-target">สำนักงาน ที่ปรึกษา ก่อสร้าง</div>
+          <ul class="concept-features">
+            <li>Portfolio ผลงาน</li><li>ใบรับรองและรางวัล</li>
+            <li>แบบฟอร์มติดต่อ</li><li>ทีมงานและประสบการณ์</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- FUNCTION TABLE — feature comparison by package -->
+  <section class="func-section" id="func-table">
+    <div class="wrap">
+      <span class="eyebrow reveal">เปรียบเทียบแพ็กเกจ</span>
+      <span class="gold-line-short reveal"></span>
+      <h2 class="section-h reveal" id="ft-heading">ฟีเจอร์ทั้งหมดที่เราทำได้</h2>
+      <p class="section-p reveal" id="ft-sub">เปรียบเทียบแต่ละแพ็กเกจแบบละเอียด</p>
+      <div class="func-table-wrap reveal">
+        <table class="func-table" id="ft-table">
+          <thead>
+            <tr>
+              <th>ฟีเจอร์</th>
+              <th class="th-basic">Basic</th>
+              <th class="th-growth">Growth</th>
+              <th class="th-premium">Premium</th>
+            </tr>
+          </thead>
+          <tbody id="ft-body">
+            <tr><td>หน้าแรก (Homepage)</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>หน้าเกี่ยวกับเรา</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>หน้าบริการ / สินค้า</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>หน้าติดต่อ + Google Map</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>รองรับมือถือ 100%</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>SEO พื้นฐาน</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>ออกแบบโลโก้ฟรี</td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>แกลเลอรี่ผลงาน / Before-After</td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>ระบบจองออนไลน์</td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>รีวิวลูกค้าในเว็บ</td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>เชื่อม LINE OA</td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>โปรโมชั่น / ข่าวสาร</td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>ชำระเงินออนไลน์ (QR/บัตร)</td><td><span class="func-no">✗</span></td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>ระบบสมาชิก + คูปองส่วนลด</td><td><span class="func-no">✗</span></td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>Analytics Dashboard</td><td><span class="func-no">✗</span></td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>ติดตามออเดอร์ Real-time</td><td><span class="func-no">✗</span></td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td></tr>
+            <tr><td>ดูแลรายเดือน (Maintenance)</td><td><span class="func-no">✗</span></td><td><span class="func-no">✗</span></td><td><span class="func-yes">✦</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta-section">
+    <div class="cta-inner">
+      <span class="eyebrow reveal cta-eyebrow">เริ่มต้นง่ายกว่าที่คิด</span>
+      <h2 class="reveal cta-h2">ดู<span>Mockup ฟรี</span><br>ก่อนตัดสินใจ</h2>
+      <p class="reveal cta-body">เราออกแบบหน้าตัวอย่างให้ร้านคุณโดยเฉพาะ ดูก่อนว่าชอบไหม ค่อยตัดสินใจ ไม่มีข้อผูกมัดใดๆ</p>
+      <button class="btn-primary reveal cta-btn" style="font-size:16px; padding:18px 42px;" onclick="window.open('https://line.me','_blank')">📞 ขอ Mockup ฟรีเลย</button>
+      <p class="cta-note reveal">ไม่มีค่าใช้จ่าย · ไม่มีข้อผูกมัด · ได้ผลภายใน 3–5 วันทำการ</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+  <div class="footer footer-customer">
+    Web Design Marketing · บริการออกแบบเว็บไซต์มืออาชีพ · ราคาถูก คุณภาพสูง บริการดี
+  </div>
+
+</div><!-- end customer-view -->
+
+<!-- ═══════════════════════════════════════ STAFF VIEW ═══════════════════════════════════════ -->
+<div id="staff-view" class="view">
+
+  <div class="staff-topbar">
+    <div class="staff-topbar-left">
+      📋 คู่มือทีมขาย
+      <span class="staff-badge">INTERNAL</span>
+    </div>
+    <div class="staff-user">
+      <span id="staff-name-display">สตาฟฟ์</span>
+      <button class="btn-logout" onclick="logout()">ออกจากระบบ</button>
+    </div>
+  </div>
+
+  <div class="staff-tabs">
+    <div class="staff-tab active" data-panel="sp1">1. รู้จักลูกค้า</div>
+    <div class="staff-tab" data-panel="sp2">2. สคริปต์พูด</div>
+    <div class="staff-tab" data-panel="sp3">3. รับมือข้อแก้ตัว</div>
+    <div class="staff-tab" data-panel="sp4">4. กลยุทธ์ปิดการขาย 90%</div>
+    <div class="staff-tab" data-panel="sp5">5. กระบวนการขาย</div>
+    <div class="staff-tab" data-panel="sp6">6. Checklist</div>
+  </div>
+
+  <!-- PANEL 1 -->
+  <div class="staff-panel active" id="sp1">
+    <div class="s-wrap">
+      <div class="s-eyebrow">ก่อนออกไปพบลูกค้า</div>
+      <h2 class="s-h2">รู้จักลูกค้าแต่ละกลุ่ม<br>ก่อนเดินเข้าร้าน</h2>
+      <p class="s-p">เจ้าของร้านแต่ละกลุ่มมี Pain Point ต่างกัน วิธีพูดต่างกัน และงบต่างกัน — เตรียมให้ตรงก่อนจะปิดงานได้เร็วกว่ามาก</p>
+
+      <div class="target-grid">
+        <div class="target-card">
+          <span class="t-badge badge-a">กลุ่ม A — เป้าหมักหลัก</span>
+          <h3>คลินิก · ร้านอาหาร/คาเฟ่ · แฟชั่น · รีสอร์ท · สำนักงานบัญชี/กฎหมาย</h3>
+          <ul>
+            <li>งบสูง ตัดสินใจเร็ว</li>
+            <li>เจ้าของตัดสินใจเอง ไม่ต้องผ่านคนกลาง</li>
+            <li>เน้นภาพลักษณ์ + ระบบจอง</li>
+            <li>อยากได้ลูกค้าใหม่จาก Google</li>
+          </ul>
+          <span class="profit-tag" style="color:#6ee7b7">💰 มูลค่างานสูง · ปิดได้ง่าย · โฟกัสก่อน</span>
+        </div>
+        <div class="target-card">
+          <span class="t-badge badge-b">กลุ่ม B — เสริม</span>
+          <h3>ร้านค้าท้องถิ่น · ร้านซ่อม · เสริมสวย · SME เล็ก</h3>
+          <ul>
+            <li>งบจำกัด ต้องการเรียบง่าย</li>
+            <li>เน้น "หาร้านเจอ" เป็นหลัก</li>
+            <li>ปริมาณมาก ทำได้เร็ว</li>
+            <li>เหมาะกับ Package Basic</li>
+          </ul>
+          <span class="profit-tag" style="color:#93c5fd">📦 ปริมาณมาก · ปิดง่าย · งบน้อยกว่า</span>
+        </div>
+        <div class="target-card">
+          <span class="t-badge badge-c">กลุ่ม C — ระยะยาว</span>
+          <h3>โรงเรียน · องค์กรไม่แสวงกำไร · สมาคม</h3>
+          <ul>
+            <li>งบรออนุมัติ กระบวนการนาน</li>
+            <li>มีผู้ตัดสินใจหลายคน</li>
+            <li>เน้น Content + โครงสร้างชัดเจน</li>
+            <li>ต้องการความน่าเชื่อถือสูง</li>
+          </ul>
+          <span class="profit-tag" style="color:#fde047">⏳ ปิดช้า แต่มูลค่างานสูง</span>
+        </div>
+      </div>
+
+      <hr class="s-divider">
+      <h2 class="s-h2">Pain Point หลักที่เจ้าของร้านบอกบ่อย</h2>
+      <p class="s-p">ฟังให้ออกก่อน แล้วค่อยตอบตรงจุด — อย่าพูดฟีเจอร์ทันที ให้พูดถึงปัญหาที่เขาเจอก่อนเสมอ</p>
+
+      <div class="s-card gold-left">
+        <h3>😤 "เว็บเก่า มือถือดูยาก"</h3>
+        <p>ลูกค้าส่วนใหญ่ค้นหาผ่านมือถือ ถ้าเว็บดูยาก ลูกค้าออกในไม่กี่วินาที → เน้นเรื่อง Responsive + ความเร็ว</p>
+      </div>
+      <div class="s-card gold-left">
+        <h3>🔍 "ลูกค้าหาร้านไม่เจอ"</h3>
+        <p>ปัญหาคือไม่ติด Google ไม่ใช่แค่ไม่มีเว็บ → เน้น SEO + Google Business Profile + Landing Page ที่ถูกต้อง</p>
+      </div>
+      <div class="s-card gold-left">
+        <h3>📅 "ไม่มีช่องทางจองออนไลน์"</h3>
+        <p>ลูกค้าอยากจองตอนดึก แต่ร้านปิดแล้ว → เน้นระบบจองที่ทำงาน 24 ชม. แม้ไม่มีพนักงานรับสาย</p>
+      </div>
+      <div class="s-card gold-left">
+        <h3>🎨 "ยังไม่มีโลโก้ / โลโก้ดูไม่เป็นมืออาชีพ"</h3>
+        <p>นี่คือโอกาส! เสนอบริการออกแบบโลโก้ฟรีทันทีเป็น Hook ดึงดูดให้ตัดสินใจง่ายขึ้น → ลดความกังวลเรื่องค่าใช้จ่าย</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 2 -->
+  <div class="staff-panel" id="sp2">
+    <div class="s-wrap">
+      <div class="s-eyebrow">ใช้ประกอบการนำเสนอ</div>
+      <h2 class="s-h2">สคริปต์สำหรับแต่ละสถานการณ์</h2>
+      <p class="s-p">เลือก Opening, Body, Closing ให้เหมาะกับลูกค้าแต่ละคน — ไม่ต้องพูดทุกอย่าง</p>
+
+      <hr class="s-divider">
+      <h3 style="font-family:Kanit;font-size:18px;font-weight:700;color:var(--gold);margin-bottom:20px">🎯 OPENING — เปิดให้โดนใจใน 30 วินาทีแรก</h3>
+
+      <div class="s-card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:600">เหมาะกับร้านที่มีคู่แข่งเยอะในพื้นที่</div>
+        <div class="script-block">
+          <div class="script-tag">💬 พูด</div>
+          <p>"ผมลองค้นใน Google ว่า '<strong>คลินิกความงามแถวนี้</strong>' ก่อนมาเลยครับ — ร้านที่ขึ้นเป็นอันดับแรกคือ [ชื่อคู่แข่ง] ร้านคุณยังไม่ขึ้นเลย ผมเลยอยากมาคุยว่าเราจะช่วยให้ร้านคุณขึ้นมาแทนได้ยังไงครับ"</p>
+        </div>
+      </div>
+      <div class="s-card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:600">เหมาะกับร้านที่มีแต่ Facebook</div>
+        <div class="script-block">
+          <div class="script-tag">💬 พูด</div>
+          <p>"Facebook ดีครับ แต่มีจุดอ่อนหนึ่งอย่าง — <strong>คุณไม่ได้เป็นเจ้าของฐานลูกค้านั้น</strong> วันไหน Facebook เปลี่ยนอัลกอริธึม โพสต์คุณเข้าไม่ถึงลูกค้าเลย แต่ถ้ามีเว็บ Google จะส่งลูกค้ามาให้ทุกวัน โดยไม่ต้องจ่ายค่าโฆษณาเพิ่ม"</p>
+        </div>
+      </div>
+      <div class="s-card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:600">เหมาะกับร้านที่กังวลเรื่องราคา</div>
+        <div class="script-block">
+          <div class="script-tag">💬 พูด</div>
+          <p>"ลองคิดแบบนี้ครับ — ถ้าเว็บช่วยให้มีลูกค้าเพิ่มแค่ <strong>วันละ 2 คน</strong> คิดเป็นรายได้เดือนละเท่าไหร่? ค่าเว็บครั้งเดียวคืนทุนใน [X] เดือน และหลังจากนั้นเป็นกำไรล้วนๆ แถมยังได้โลโก้ฟรีอีกด้วยนะครับ"</p>
+        </div>
+      </div>
+      <div class="s-card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:600">เหมาะกับร้านที่ยังไม่มีโลโก้ (ใช้ Logo Hook)</div>
+        <div class="script-block">
+          <div class="script-tag">💬 พูด</div>
+          <p>"ร้านคุณยังไม่มีโลโก้หรือเปล่าครับ? เราออกแบบโลโก้ให้ฟรีเลยเมื่อสั่งทำเว็บ — <strong>ปกติราคา 3,000–8,000 บาท</strong> แต่สำหรับลูกค้าเว็บของเรา ฟรีเลยครับ แบบนี้คิดว่าคุ้มไหมครับ?"</p>
+        </div>
+      </div>
+
+      <hr class="s-divider">
+      <h3 style="font-family:Kanit;font-size:18px;font-weight:700;color:var(--gold);margin-bottom:20px">📊 BODY — นำเสนอให้เห็นภาพ</h3>
+      <div class="s-card">
+        <div class="script-block">
+          <div class="script-tag">💬 แนวพูด</div>
+          <p>"เว็บไซต์ที่เราทำไม่ใช่แค่ทำสวย — เราออกแบบให้ <strong>ลูกค้ากดจอง ซื้อ หรือโทรมาได้ภายใน 3 คลิก</strong> และวัดผลได้ว่าเดือนนี้เว็บช่วยสร้างยอดขายเท่าไหร่จากสถิติจริง"</p>
+        </div>
+      </div>
+      <div class="s-card">
+        <div class="script-block">
+          <div class="script-tag">💬 แนวพูด</div>
+          <p>"เราแบ่งบริการ 3 ระดับครับ Basic สำหรับเริ่มต้น Growth สำหรับที่อยากได้ยอดจริง และ Premium สำหรับระบบครบจบ <strong>ร้านคุณน่าจะเหมาะกับ [ระบุระดับ] เพราะ [เหตุผลจากข้อมูลที่ถามมาก่อน]</strong> ทุกแพ็กเกจออกแบบโลโก้ให้ฟรีด้วยนะครับ"</p>
+        </div>
+      </div>
+
+      <hr class="s-divider">
+      <h3 style="font-family:Kanit;font-size:18px;font-weight:700;color:var(--gold);margin-bottom:20px">🔒 CLOSING — ปิดการขายให้ได้</h3>
+      <div class="s-card">
+        <h3 style="color:var(--gold-lt);font-size:15px;">ใช้เมื่อลูกค้าสนใจแต่ยังลังเล</h3>
+        <div class="script-block">
+          <div class="script-tag">💬 พูด</div>
+          <p>"ไม่ต้องตัดสินใจตอนนี้ก็ได้ครับ — เราทำ <strong>Mockup หน้าแรกให้ดูก่อนฟรี</strong> ใช้เวลา 3–5 วัน ดูแล้วถ้าชอบค่อยเริ่ม ถ้าไม่ชอบไม่มีค่าใช้จ่าย และโลโก้ก็ฟรีด้วยนะครับถ้าตกลง"</p>
+        </div>
+      </div>
+      <div class="s-card">
+        <h3 style="color:var(--gold-lt);font-size:15px;">ใช้เมื่อลูกค้าถามว่า "เริ่มเมื่อไหร่?"</h3>
+        <div class="script-block">
+          <div class="script-tag">💬 พูด</div>
+          <p>"ถ้าตกลงวันนี้เราเริ่มกระบวนการ Discovery ได้เลยครับ ภายใน [X] วันทำการจะมี Wireframe แรกให้ดู เว็บพร้อมใช้ใน [X] สัปดาห์ และโลโก้จะส่งให้ก่อนเลยครับ"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 3 -->
+  <div class="staff-panel" id="sp3">
+    <div class="s-wrap">
+      <div class="s-eyebrow">เตรียมคำตอบไว้ให้พร้อม</div>
+      <h2 class="s-h2">ข้อแก้ตัวที่เจอบ่อย + วิธีตอบ</h2>
+      <p class="s-p">อย่าหงุดหงิดเมื่อโดนปฏิเสธ — ข้อแก้ตัวส่วนใหญ่มาจาก "ยังไม่เห็นคุณค่า" ไม่ใช่ "ไม่อยากได้"</p>
+
+      <div class="obj-card">
+        <div class="obj-q">❝ "แพงเกินไป ไม่มีงบ"</div>
+        <div class="obj-a">
+          <p>อย่าลดราคาทันที — ให้ตั้งคำถามก่อน: <em>"ตอนนี้ร้านเสียลูกค้าไปกี่คนต่อวันที่หาร้านไม่เจอ? ถ้าเว็บช่วยได้แค่ 1 คน/วัน ค่าเว็บคืนทุนในกี่เดือน?"</em></p>
+          <p>และย้ำเสมอ: <em>"แถมยังได้โลโก้ฟรีมูลค่า 3,000–8,000 บาทด้วยนะครับ ถ้ารวมกันแล้วคุ้มมากกว่านี้ครับ"</em></p>
+          <span class="tip-tag">✅ Tip: เสนอ ROI ให้เห็น ไม่ใช่เปรียบราคา</span>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q">❝ "มีแค่ Facebook ก็พอแล้ว"</div>
+        <div class="obj-a">
+          <p>ตอบด้วยความจริง: <em>"Facebook ดีครับ แต่ลูกค้าที่ค้นหาใน Google จะไม่เจอร้านคุณเลย เพราะ Facebook Page ติดอันดับ Google ได้ยากมาก ถ้า Facebook เปลี่ยนกฎ โพสต์คุณก็หายได้เลย"</em></p>
+          <span class="tip-tag">✅ Tip: เปิด Google ให้ดูสดๆ ว่าคู่แข่งขึ้น ร้านเขาไม่ขึ้น</span>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q">❝ "ยังไม่พร้อม รอก่อน"</div>
+        <div class="obj-a">
+          <p>ถามให้ชัดขึ้น: <em>"รอเรื่องอะไรอยู่ครับ? เรื่องงบ เนื้อหา หรือเวลา?"</em> แล้วตอบตรงจุดนั้น</p>
+          <p>ถ้ากังวลเรื่องเนื้อหา: <em>"เราช่วยได้ตั้งแต่เริ่มต้นครับ ไม่ต้องเตรียมอะไรมาก แม้แต่โลโก้เราก็ทำให้ฟรี"</em></p>
+          <span class="tip-tag">✅ Tip: เสนอ Mockup ฟรี = ลดความเสี่ยงเรื่อง "ยังไม่แน่ใจ"</span>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q">❝ "เคยทำแล้ว แต่ไม่ได้ผล"</div>
+        <div class="obj-a">
+          <p>นี่คือโอกาส — อย่าพูดว่าของเก่าไม่ดี ให้ถามว่า: <em>"ปัญหาหลักของเว็บเดิมคืออะไรครับ? รูปแบบ? ความเร็ว? ไม่ติด Google? หรือไม่มีคนเข้าเว็บ?"</em></p>
+          <p>แล้วแสดงให้เห็นว่าเราแก้ปัญหานั้นได้ยังไง พร้อม Case Study ถ้ามี</p>
+          <span class="tip-tag">✅ Tip: อย่าขาย "เว็บ" ขาย "วิธีแก้ปัญหา" ที่เขาเคยเจอ</span>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q">❝ "ขอคิดดูก่อน"</div>
+        <div class="obj-a">
+          <p>อย่าทิ้งไว้เฉยๆ — ถามว่า: <em>"มีเรื่องไหนที่ยังสงสัยอยู่ไหมครับ ผมอยากให้ข้อมูลเพิ่มก่อนตัดสินใจ"</em></p>
+          <p>และนัด Follow Up ให้ชัดเจน: <em>"งั้นขอนัด [วัน] มาดู Mockup ที่เตรียมให้ได้ไหมครับ? ฟรีนะครับ ไม่มีข้อผูกมัด"</em></p>
+          <span class="tip-tag">✅ Tip: อย่าออกจากร้านโดยไม่มีนัดถัดไป</span>
+        </div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q">❝ "ยังไม่มีโลโก้เลย ไม่รู้จะเริ่มอย่างไร"</div>
+        <div class="obj-a">
+          <p>นี่คือ Golden Hook! ตอบทันที: <em>"ไม่เป็นไรครับ เราออกแบบโลโก้ให้ฟรีเลยเมื่อสั่งทำเว็บ ปกติราคา 3,000–8,000 บาท แต่ฟรีสำหรับลูกค้าเว็บของเราครับ ลูกค้าไม่ต้องเตรียมอะไรเลย เราดูแลให้ครบ"</em></p>
+          <span class="tip-tag">✅ Tip: Logo Hook ปิดงานได้มากที่สุดในกลุ่มลูกค้าใหม่</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 4 -->
+  <div class="staff-panel" id="sp4">
+    <div class="s-wrap">
+      <div class="s-eyebrow">กลยุทธ์หลัก</div>
+      <h2 class="s-h2">วิธีปิดการขายให้ได้<br><span style="color:var(--gold)">90–100%</span></h2>
+      <p class="s-p">ไม่มีสูตรสำเร็จ แต่มีระบบ — ทำตามนี้คือชนะทุกครั้ง</p>
+
+      <div class="close-strategy">
+        <h3>⚡ VARBEE Framework — ระบบปิดการขาย 6 ขั้นตอน</h3>
+        <div class="strategy-steps">
+          <div class="s-step">
+            <div class="s-step-num">V</div>
+            <div class="s-step-body">
+              <h4>Value First — เสนอคุณค่าก่อนราคา</h4>
+              <p>พูดถึงสิ่งที่ลูกค้าได้รับก่อนเสมอ: ลูกค้าใหม่จาก Google, ระบบจอง 24 ชม., โลโก้ฟรี — ให้เขาเห็นก่อนว่าคุ้มค่าขนาดไหน แล้วค่อยบอกราคา</p>
+            </div>
+          </div>
+          <div class="s-step">
+            <div class="s-step-num">A</div>
+            <div class="s-step-body">
+              <h4>Ask First — ถามก่อน อย่าขายก่อน</h4>
+              <p>5 นาทีแรกให้ถามเรื่องร้าน ฟังแล้วจะรู้ Pain Point แท้จริง จากนั้นนำเสนอตรงจุดนั้นได้เลย ลูกค้ารู้สึกว่า "คนนี้เข้าใจปัญหาเรา" ไม่ใช่แค่มาขายของ</p>
+            </div>
+          </div>
+          <div class="s-step">
+            <div class="s-step-num">R</div>
+            <div class="s-step-body">
+              <h4>Reality Show — แสดงให้เห็น ไม่ใช่แค่บอก</h4>
+              <p>เปิด Google สดๆ ให้เห็นว่าคู่แข่งขึ้น แต่ร้านเขาไม่ขึ้น — ภาพจริงมีน้ำหนักกว่าคำพูดทุกอย่าง ทำสิ่งนี้ในทุกการพบ</p>
+            </div>
+          </div>
+          <div class="s-step">
+            <div class="s-step-num">B</div>
+            <div class="s-step-body">
+              <h4>Bonus Hook — ดึงด้วย Logo ฟรี</h4>
+              <p>เสนอโลโก้ฟรีเป็น Deal Closer สุดท้าย — ถ้าลูกค้าลังเลระหว่าง "ทำ หรือ ไม่ทำ" การได้โลโก้มูลค่า 3,000–8,000 บาทฟรีมักเป็นจุดที่ทำให้ตัดสินใจได้เลย</p>
+            </div>
+          </div>
+          <div class="s-step">
+            <div class="s-step-num">E</div>
+            <div class="s-step-body">
+              <h4>Evidence — Case Study และ Portfolio</h4>
+              <p>มีตัวอย่างร้านประเภทเดียวกันเสมอ ร้านคลินิกดูตัวอย่างคลินิก ร้านอาหารดูตัวอย่างร้านอาหาร ความเชื่อมั่นเกิดจากการเห็นผลงานที่คล้ายกัน</p>
+            </div>
+          </div>
+          <div class="s-step">
+            <div class="s-step-num">E</div>
+            <div class="s-step-body">
+              <h4>Exit with Next Step — ออกพร้อมนัดถัดไปเสมอ</h4>
+              <p>ไม่ว่าจะปิดได้หรือไม่ — ต้องได้นัดถัดไปก่อนออกจากร้านทุกครั้ง "ขอนัด [วัน] มาดู Mockup ได้ไหมครับ?" คือประโยคที่สำคัญที่สุด</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="s-divider">
+      <h2 class="s-h2">จิตวิทยาการปิดการขาย</h2>
+      <p class="s-p">เข้าใจกลไกการตัดสินใจของลูกค้า — แล้วจะรู้ว่าต้องกดจุดไหน</p>
+
+      <div class="varbee-box">
+        <h3>🧠 หลักการที่ได้ผลจริงในสนาม</h3>
+        <ul class="varbee-list">
+          <li>
+            <span class="icon">1️⃣</span>
+            <div><strong>Loss Aversion กลัวเสียมากกว่าอยากได้</strong><br>พูดว่า "ร้านคุณเสียลูกค้าไป 5 คน/วัน" มีน้ำหนักกว่า "ร้านคุณจะได้ลูกค้าเพิ่ม 5 คน/วัน" เพราะคนกลัวการเสียมากกว่าอยากได้สิ่งใหม่</div>
+          </li>
+          <li>
+            <span class="icon">2️⃣</span>
+            <div><strong>Social Proof — คนอื่นทำแล้ว ฉันก็ต้องทำ</strong><br>บอกว่า "ร้านคลินิกใกล้ๆ ที่เราทำให้เพิ่งได้ลูกค้าจาก Google เดือนละกว่า 30 คน" ดีกว่าพูดถึงฟีเจอร์เว็บ</div>
+          </li>
+          <li>
+            <span class="icon">3️⃣</span>
+            <div><strong>Urgency จริงๆ ไม่ใช่ Fake Urgency</strong><br>บอกว่า "คู่แข่งกำลังทำเว็บอยู่" หรือ "พื้นที่ Google มีจำกัด ใครขึ้นก่อนได้เปรียบกว่า" — นี่คือความจริง ไม่ใช่การกดดันเท็จ</div>
+          </li>
+          <li>
+            <span class="icon">4️⃣</span>
+            <div><strong>Reciprocity — ให้ก่อน แล้วเขาจะให้กลับ</strong><br>Mockup ฟรี + โลโก้ฟรี ทำให้ลูกค้ารู้สึกผูกพัน อยากตอบแทนด้วยการตัดสินใจซื้อ นี่คือหัวใจของกลยุทธ์</div>
+          </li>
+          <li>
+            <span class="icon">5️⃣</span>
+            <div><strong>Simplify — ทำให้ง่ายที่สุด</strong><br>เสนอแค่ 1–2 Package ที่เหมาะกับร้านนั้น อย่าให้เลือกจากทั้งหมด 10 ตัวเลือก เลือกน้อย ตัดสินใจง่าย ปิดเร็ว</div>
+          </li>
+          <li>
+            <span class="icon">6️⃣</span>
+            <div><strong>Mockup ดี = ปิดงาน 80% แล้ว</strong><br>ลูกค้าที่เห็น Mockup ของร้านตัวเองมักตัดสินใจได้ทันที เพราะไม่ใช่แค่ "ไอเดีย" อีกต่อไป แต่เห็นแล้วว่าร้านตัวเองหน้าตาเป็นอย่างไร</div>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="s-divider">
+      <h2 class="s-h2">คำถามวิเศษที่ใช้ในทุกสถานการณ์</h2>
+      <div class="s-card gold-left">
+        <h3 style="color:var(--gold)">คำถามที่ควรถามก่อนเสมอ</h3>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;margin-top:12px">
+          <li style="display:flex;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold)">›</span> "ตอนนี้ลูกค้าส่วนใหญ่รู้จักร้านผ่านช่องทางไหนครับ?"</li>
+          <li style="display:flex;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold)">›</span> "ถ้ามีลูกค้าใหม่จาก Google เพิ่มอีกเดือนละ 20 คน จะเปลี่ยนธุรกิจยังไงครับ?"</li>
+          <li style="display:flex;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold)">›</span> "เคยค้นหาชื่อร้านตัวเองใน Google ดูไหมครับ ว่าขึ้นอยู่ที่ไหน?"</li>
+          <li style="display:flex;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold)">›</span> "ถ้าเว็บคืนทุนใน 3 เดือน แบบนี้คุ้มไหมครับสำหรับร้าน?"</li>
+          <li style="display:flex;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold)">›</span> "โลโก้ตอนนี้พอใจไหมครับ หรืออยากได้ใหม่ที่ดูเป็นมืออาชีพกว่า?"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 5 -->
+  <div class="staff-panel" id="sp5">
+    <div class="s-wrap">
+      <div class="s-eyebrow">ทำตามลำดับ</div>
+      <h2 class="s-h2">กระบวนการขายตั้งแต่ต้นจนปิด</h2>
+      <p class="s-p">ทำตามลำดับนี้จะช่วยให้นำเสนอได้ราบรื่น ลูกค้ารู้สึกว่าเราเข้าใจเขาจริงๆ ไม่ใช่แค่มาขายของ</p>
+
+      <div class="flow">
+        <div class="flow-step">
+          <div class="flow-left"><div class="flow-dot">1</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">ก่อนไปพบลูกค้า</span>
+            <h3>วิจัยร้านก่อนทุกครั้ง</h3>
+            <p>ลองค้น Google ชื่อร้าน / ประเภทร้าน + พื้นที่ — ดูว่าขึ้นไหม คู่แข่งขึ้นอะไรบ้าง ถ่ายหน้าจอมาเป็นหลักฐาน รวมถึงเช็คว่าร้านมีโลโก้อยู่แล้วหรือไม่</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-left"><div class="flow-dot">2</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">5 นาทีแรก</span>
+            <h3>สร้างความสัมพันธ์ ไม่ใช่เปิดสไลด์ทันที</h3>
+            <p>ถามเรื่องร้านให้เขาเล่า — ทำมากี่ปี ลูกค้าหลักเป็นใคร ช่วงไหนยุ่งที่สุด มีโลโก้ไหม ฟังแล้วจะรู้ว่าใช้ Pain Point ไหนได้ผลกว่า</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-left"><div class="flow-dot">3</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">10–15 นาที</span>
+            <h3>แสดงให้เห็น ไม่ใช่แค่บอก</h3>
+            <p>เปิด Google ให้ดูสดๆ ว่าคู่แข่งขึ้นยังไง เปิดตัวอย่างเว็บที่คล้ายกัน แสดงว่าร้านแบบนี้ควรมีอะไรบ้าง แล้วค่อยเสนอโลโก้ฟรี</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-left"><div class="flow-dot">4</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">5–10 นาที</span>
+            <h3>เสนอ Package + Logo ฟรี ที่เหมาะกับร้านนั้น</h3>
+            <p>เลือก 1–2 Package ที่เหมาะ อธิบายว่าทำไมถึงเหมาะ แล้วย้ำว่าทุก Package รวมออกแบบโลโก้ฟรีด้วย — นี่คือ deal ที่หาไม่ได้จากที่อื่น</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-left"><div class="flow-dot">5</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">ก่อนออกจากร้าน</span>
+            <h3>เสนอ Mockup ฟรี หรือนัดถัดไป</h3>
+            <p>ถ้ายังไม่ปิดได้วันนี้ ต้องได้นัดถัดไป — "ผมทำ Mockup ให้ดูก่อนได้ครับ ขอ [ชื่อร้าน + โลโก้ถ้ามี] ได้เลยไหม? หรือถ้ายังไม่มีโลโก้เราทำให้ฟรีเลยพร้อมเว็บครับ"</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-left"><div class="flow-dot">6</div><div class="flow-line"></div></div>
+          <div class="flow-body">
+            <span class="flow-time">ภายใน 24 ชม.</span>
+            <h3>Follow Up ด้วย Line / โทร</h3>
+            <p>ส่งสรุปสั้นๆ ทาง Line พร้อมลิงก์ตัวอย่างเว็บที่ใกล้เคียง, Mockup ถ้าทำทัน และย้ำเรื่องโลโก้ฟรีอีกครั้ง</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="s-divider">
+      <h2 class="s-h2">KPI ที่ควรติดตาม</h2>
+      <table class="kpi-table">
+        <thead>
+          <tr>
+            <th>ตัวชี้วัด</th>
+            <th>เป้าหมาย</th>
+            <th>วิธีวัด</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ร้านที่เข้าพบต่อสัปดาห์</td>
+            <td>10–15 ร้าน</td>
+            <td>บันทึกใน Sheet</td>
+          </tr>
+          <tr>
+            <td>Mockup ที่ส่งให้ลูกค้า</td>
+            <td>3–5 ร้าน/สัปดาห์</td>
+            <td>นับจาก Request</td>
+          </tr>
+          <tr>
+            <td>อัตราปิดการขาย</td>
+            <td>≥ 90%</td>
+            <td>ปิด / เข้าพบ</td>
+          </tr>
+          <tr>
+            <td>มูลค่าเฉลี่ยต่องาน</td>
+            <td>15,000+ บาท</td>
+            <td>รายได้ / งานที่ปิด</td>
+          </tr>
+          <tr>
+            <td>Follow Up ภายใน 24 ชม.</td>
+            <td>100%</td>
+            <td>ตรวจจาก Chat Log</td>
+          </tr>
+          <tr>
+            <td>Logo Hook Conversion</td>
+            <td>≥ 70% ของลูกค้าใหม่</td>
+            <td>นับจากที่เสนอโลโก้แล้วปิดได้</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PANEL 6 -->
+  <div class="staff-panel" id="sp6">
+    <div class="s-wrap">
+      <div class="s-eyebrow">ใช้ก่อนออกไปพบลูกค้า</div>
+      <h2 class="s-h2">Checklist ก่อนนำเสนอ</h2>
+      <p class="s-p">คลิกที่ช่องเพื่อ Mark ว่าพร้อมแล้ว — ทำให้ครบทุกข้อก่อนออกไป</p>
+
+      <div class="s-card" style="margin-bottom:20px">
+        <h3>🔍 ก่อนออกจากออฟฟิศ</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ค้น Google ชื่อร้านลูกค้าและถ่ายหน้าจอไว้แล้ว</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>รู้แล้วว่าลูกค้าอยู่กลุ่ม A / B / C</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>เตรียมตัวอย่างเว็บที่ใกล้เคียงกับร้านลูกค้า (2–3 ตัวอย่าง)</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>รู้ Pain Point หลักของร้านประเภทนั้น</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>เช็คว่าร้านลูกค้ามีโลโก้อยู่แล้วหรือไม่ (เตรียม Logo Hook)</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>มือถือ / แล็ปท็อป ชาร์จแบตเต็มแล้ว</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>มีนามบัตรติดไปด้วย</li>
+        </ul>
+      </div>
+      <div class="s-card" style="margin-bottom:20px">
+        <h3>🗣️ ระหว่างพบลูกค้า</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ถามเรื่องร้านก่อน ฟังให้จบก่อนนำเสนอ</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>เปิด Google ให้ดูสดๆ ว่าคู่แข่งขึ้นอยู่ที่ไหน</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>แสดงตัวอย่างเว็บที่ใกล้เคียง</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>เสนอ Package + โลโก้ฟรีที่เหมาะกับร้านนั้น</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>บันทึก Pain Point และข้อกังวลของลูกค้า</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>เสนอ Mockup ฟรี หรือนัดถัดไปก่อนออก</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ย้ำ Logo Hook ก่อนออกจากร้านทุกครั้ง</li>
+        </ul>
+      </div>
+      <div class="s-card">
+        <h3>📲 หลังออกจากร้าน (ภายใน 24 ชม.)</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>บันทึกข้อมูลร้านลูกค้าในระบบ CRM / Sheet</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ส่ง Line ขอบคุณ พร้อมสรุปสั้นๆ</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ส่งลิงก์ตัวอย่างเว็บที่คุยไว้</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ย้ำโปรโมชั่นโลโก้ฟรีใน Line อีกครั้ง</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>ตั้งนัด Follow Up ถัดไปในปฏิทิน</li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div>เริ่มทำ Mockup (ถ้าลูกค้าสนใจ)</li>
+        </ul>
+      </div>
+
+      <hr class="s-divider">
+      <h2 class="s-h2">เคล็ดลับจากทีมที่ปิดงานได้เยอะ</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <span class="tip-icon">📸</span>
+          <h3>ถ่ายหน้า Google ไปด้วยเสมอ</h3>
+          <p>ให้ลูกค้าเห็นว่าคู่แข่งขึ้น แต่ร้านเขาไม่ขึ้น — มีน้ำหนักกว่าคำพูดมาก</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">🎨</span>
+          <h3>ใช้ Logo Hook ทุกครั้ง</h3>
+          <p>ถามเรื่องโลโก้ก่อนเสมอ ถ้าไม่มีหรืออยากได้ใหม่ — นี่คือ Hook ที่ปิดงานได้ดีที่สุด</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">📁</span>
+          <h3>Portfolio ตรงกลุ่มลูกค้า</h3>
+          <p>ร้านคลินิกดูตัวอย่างคลินิก ร้านอาหารดูตัวอย่างร้านอาหาร อย่าให้ดูไม่เกี่ยวกัน</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">🎁</span>
+          <h3>Mockup ฟรีปิดงานได้เยอะ</h3>
+          <p>ลูกค้าที่ลังเลส่วนใหญ่ตัดสินใจได้ทันทีเมื่อเห็น Mockup จริงของร้านตัวเอง</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">📞</span>
+          <h3>โทร Follow Up ดีกว่าแค่ Line</h3>
+          <p>Line อ่านแล้วลืม การโทรแสดงว่าเราจริงจัง ปิดได้เร็วกว่า</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">💰</span>
+          <h3>พูด ROI ไม่ใช่พูดราคา</h3>
+          <p>"คืนทุนใน 3 เดือน" ดีกว่า "ราคาแค่ X บาท" เสมอ — เปลี่ยนการมองจากค่าใช้จ่ายเป็นการลงทุน</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-line"></div>
+  <div class="footer">
+    เอกสารสำหรับใช้ภายในทีมขายเท่านั้น · Web Design Marketing · อัปเดตข้อมูลให้เป็นปัจจุบันก่อนนำไปใช้งาน
+  </div>
+
+</div><!-- end staff-view -->
+
+<!-- ═══════════════════════════════════════ AUTH MODALS ═══════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-login">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('login')">✕</button>
+    <div class="modal-logo"><span>✦ Web Design Marketing</span></div>
+    <h2>เข้าสู่ระบบสตาฟฟ์</h2>
+    <p class="modal-sub">ระบบนี้สำหรับพนักงานขายและทีมงานเท่านั้น</p>
+    <div class="form-group">
+      <label class="form-label">อีเมล</label>
+      <input type="email" class="form-input" id="login-email" placeholder="email@example.com">
+    </div>
+    <button class="btn-full" onclick="doLogin()">เข้าสู่ระบบ</button>
+    <div class="modal-msg" id="login-msg"></div>
+  </div>
+</div>
+
+<script>
+// ─── Config ───
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbxmNkixZMO1jnBMln9RPGWFVUzhvV4W-lAei19VHsr0IGa6chRP_et4dNAyJora5GF8UA/exec';
+
+// ─── Scroll Reveal ───
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+function initReveal() {
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}
+initReveal();
+
+// Navbar scroll effect
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ─── Hamburger / Mobile Drawer ───
+function toggleDrawer() {
+  const btn    = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('navDrawer');
+  const isOpen = drawer.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
+function closeDrawer() {
+  document.getElementById('navDrawer').classList.remove('open');
+  document.getElementById('hamburgerBtn').classList.remove('open');
+}
+// close drawer on outside click
+document.addEventListener('click', (e) => {
+  const drawer = document.getElementById('navDrawer');
+  const btn    = document.getElementById('hamburgerBtn');
+  if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+    closeDrawer();
+  }
+});
+
+// ─── Modal Control ───
+function openModal(name) {
+  document.getElementById('modal-' + name).classList.add('open');
+}
+function closeModal(name) {
+  document.getElementById('modal-' + name).classList.remove('open');
+}
+
+// ─── GAS Content Loader ───────────────────────────────────────
+//  ดึงข้อมูลจาก Google Sheets แล้ว render แทน hardcode
+//  sections: Hero, PainPoints, Quote, Packages, WorkingApproach,
+//            Process, Concepts, FunctionTable, CTA, Footer
+// ─────────────────────────────────────────────────────────────
+async function loadContent() {
+  try {
+    const res  = await fetch(`${GAS_URL}?action=getContent`);
+    const data = await res.json();
+    if (data.status !== 'ok') return;
+
+    const kv = (arr) => {
+      const m = {};
+      (arr || []).forEach(r => { if (r.key) m[r.key] = r; });
+      return m;
+    };
+
+    // ── Hero ──
+    const h = kv(data.hero);
+    if (h.badge)         safeHTML('.hero-badge',   h.badge.value);
+    if (h.h1_line1)      safeHTML('#hero-h1',
+      `${h.h1_line1?.value || ''}<br><span class="gold">${h.h1_line2?.value || ''}</span><br><span class="cream">${h.h1_line3?.value || ''}</span>`);
+    if (h.sub)           safeHTML('.hero-sub',       h.sub.value);
+    if (h.stat1_num)     safeHTML('#stat1-num',      h.stat1_num.value);
+    if (h.stat1_label)   safeHTML('#stat1-label',    h.stat1_label.value);
+    if (h.stat2_num)     safeHTML('#stat2-num',      h.stat2_num.value);
+    if (h.stat2_label)   safeHTML('#stat2-label',    h.stat2_label.value);
+    if (h.stat3_num)     safeHTML('#stat3-num',      h.stat3_num.value);
+    if (h.stat3_label)   safeHTML('#stat3-label',    h.stat3_label.value);
+    const ctaPri  = document.querySelector('.btn-primary[data-cta="hero"]');
+    const ctaSec  = document.querySelector('.btn-secondary[data-cta="hero"]');
+    if (ctaPri && h.cta_primary)   ctaPri.textContent   = h.cta_primary.value;
+    if (ctaSec && h.cta_secondary) ctaSec.textContent   = h.cta_secondary.value;
+
+    // ── PainPoints ──
+    const pp = kv(data.painPoints);
+    const sec = pp.section || {};
+    if (sec.eyebrow)    safeHTML('.pain-eyebrow',     sec.eyebrow);
+    if (sec.heading)    safeHTML('.pain-heading',      sec.heading);
+    if (sec.subheading) safeHTML('.pain-sub',          sec.subheading);
+    ['p1','p2','p3','p4','p5','p6'].forEach(k => {
+      const p = pp[k]; if (!p) return;
+      const el = document.querySelector(`[data-pain="${k}"]`);
+      if (!el) return;
+      el.querySelector('.pain-num').textContent = p.num;
+      el.querySelector('h3').textContent        = p.title;
+      el.querySelector('p').textContent         = p.body;
+    });
+
+    // ── Quote ──
+    const q = kv(data.quote);
+    if (q.text)   safeHTML('.quote-text', q.text.value);
+    if (q.source) safeHTML('.quote-src',  q.source.value);
+
+    // ── Packages ──
+    const pkgRows = (data.packages || []).filter(r => r.key && r.key.startsWith('pkg'));
+    pkgRows.forEach((p, i) => {
+      const el = document.querySelector(`[data-pkg="${p.key}"]`);
+      if (!el) return;
+      const featEls = el.querySelectorAll('.pkg-list li');
+      const feats   = (p.features || '').split('|').filter(Boolean);
+      featEls.forEach((li, fi) => {
+        if (feats[fi]) li.childNodes[li.childNodes.length - 1].textContent = feats[fi];
+      });
+      const tierEl = el.querySelector('.pkg-tier');
+      const nameEl = el.querySelector('.pkg-name');
+      const descEl = el.querySelector('.pkg-desc');
+      const priceEl= el.querySelector('.pkg-price strong');
+      const subEl  = el.querySelector('.pkg-price');
+      if (tierEl)  tierEl.textContent = p.tier_label;
+      if (nameEl)  nameEl.textContent = p.name;
+      if (descEl)  descEl.textContent = p.desc;
+      if (priceEl) priceEl.textContent= p.price_label;
+      if (subEl)   subEl.childNodes[subEl.childNodes.length - 1].textContent = '\n' + (p.price_sub || '');
+    });
+
+    // ── WorkingApproach ──
+    const wa = kv(data.workingApproach);
+    if (wa.section_heading) safeHTML('#wa-heading', wa.section_heading.title);
+    if (wa.section_sub)     safeHTML('#wa-sub',     wa.section_sub.title);
+    ['wa1','wa2','wa3','wa4'].forEach(k => {
+      const w = wa[k]; if (!w) return;
+      const el = document.querySelector(`[data-wa="${k}"]`);
+      if (!el) return;
+      el.querySelector('.approach-icon').textContent = w.icon;
+      el.querySelector('h3').textContent             = w.title;
+      el.querySelector('p').textContent              = w.body;
+    });
+
+    // ── Process ──
+    const proc = kv(data.process);
+    if (proc.section_heading) safeHTML('#proc-heading', proc.section_heading.title);
+    if (proc.section_sub)     safeHTML('#proc-sub',     proc.section_sub.title);
+    ['s1','s2','s3','s4','s5','s6','s7','s8'].forEach(k => {
+      const s = proc[k]; if (!s) return;
+      const el = document.querySelector(`[data-proc="${k}"]`);
+      if (!el) return;
+      el.querySelector('.flow-dot').textContent   = s.step;
+      el.querySelector('.flow-time').textContent  = s.time_label;
+      el.querySelector('h3').textContent          = s.title;
+      el.querySelector('p').textContent           = s.body;
+    });
+
+    // ── Concepts ──
+    const con = kv(data.concepts);
+    if (con.section_heading) safeHTML('#con-heading', con.section_heading.title);
+    if (con.section_sub)     safeHTML('#con-sub',     con.section_sub.title);
+    ['c1','c2','c3','c4','c5'].forEach(k => {
+      const c = con[k]; if (!c) return;
+      const el = document.querySelector(`[data-con="${k}"]`);
+      if (!el) return;
+      el.querySelector('.concept-icon').textContent   = c.icon;
+      el.querySelector('.concept-name').textContent   = c.name;
+      el.querySelector('.concept-target').textContent = c.target;
+      const feats = (c.features || '').split('|').filter(Boolean);
+      const liEls = el.querySelectorAll('.concept-features li');
+      liEls.forEach((li, i) => { if (feats[i]) li.textContent = feats[i]; });
+    });
+
+    // ── FunctionTable ──
+    const ft    = kv(data.functionTable);
+    const ftBody= document.getElementById('ft-body');
+    if (ft.section_heading) safeHTML('#ft-heading', ft.section_heading.feature);
+    if (ft.section_sub)     safeHTML('#ft-sub',     ft.section_sub.feature);
+    const ftRows = (data.functionTable || []).filter(r => r.key && /^f\d+$/.test(r.key));
+    if (ftRows.length && ftBody) {
+      ftBody.innerHTML = ftRows.map(r =>
+        `<tr>
+          <td>${r.feature}</td>
+          <td>${r.basic   === '✦' ? '<span class="func-yes">✦</span>' : '<span class="func-no">✗</span>'}</td>
+          <td>${r.growth  === '✦' ? '<span class="func-yes">✦</span>' : '<span class="func-no">✗</span>'}</td>
+          <td>${r.premium === '✦' ? '<span class="func-yes">✦</span>' : '<span class="func-no">✗</span>'}</td>
+        </tr>`
+      ).join('');
+    }
+
+    // ── CTA ──
+    const cta = kv(data.cta);
+    if (cta.eyebrow)  safeHTML('.cta-eyebrow',  cta.eyebrow.value);
+    if (cta.heading)  safeHTML('.cta-h2',        cta.heading.value);
+    if (cta.body)     safeHTML('.cta-body',       cta.body.value);
+    if (cta.btn_text) {
+      const btn = document.querySelector('.cta-btn');
+      if (btn) btn.textContent = cta.btn_text.value;
+    }
+    if (cta.note) safeHTML('.cta-note', cta.note.value);
+
+    // ── Footer ──
+    const foot = kv(data.footer);
+    if (foot.customer) safeHTML('.footer-customer', foot.customer.value);
+
+    // re-init reveal for dynamically loaded elements
+    initReveal();
+
+  } catch (e) {
+    console.warn('GAS content load failed, using static fallback:', e);
+  }
+}
+
+// helper: set innerHTML safely (no user-supplied data here, all from our own Sheet)
+function safeHTML(selector, html) {
+  const el = typeof selector === 'string'
+    ? document.querySelector(selector)
+    : selector;
+  if (el && html !== undefined && html !== '') el.innerHTML = html;
+}
+
+// ─── Login ───
+async function doLogin() {
+  const email = document.getElementById('login-email').value.trim();
+  const msgEl = document.getElementById('login-msg');
+  if (!email) {
+    msgEl.textContent = 'กรุณากรอกอีเมล';
+    msgEl.className   = 'modal-msg error';
+    return;
+  }
+  msgEl.textContent = 'กำลังตรวจสอบ...';
+  msgEl.className   = 'modal-msg';
+  try {
+    const res  = await fetch(`${GAS_URL}?action=login&email=${encodeURIComponent(email)}`);
+    const data = await res.json();
+    if (data.status === 'ok') {
+      sessionStorage.setItem('staff_name',  data.name || email);
+      sessionStorage.setItem('staff_email', email);
+      enterStaffView(data.name || email);
+    } else {
+      msgEl.textContent = 'ไม่พบอีเมลนี้ในระบบ';
+      msgEl.className   = 'modal-msg error';
+    }
+  } catch (e) {
+    const stored = sessionStorage.getItem('staff_name');
+    if (stored) {
+      enterStaffView(stored);
+    } else {
+      msgEl.textContent = 'ไม่สามารถเชื่อมต่อระบบได้ กรุณาลองใหม่';
+      msgEl.className   = 'modal-msg error';
+    }
+  }
+}
+
+function enterStaffView(name) {
+  closeModal('login');
+  closeDrawer();
+  document.getElementById('staff-name-display').textContent = name;
+  document.getElementById('customer-view').classList.remove('active');
+  document.getElementById('staff-view').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function logout() {
+  sessionStorage.removeItem('staff_name');
+  sessionStorage.removeItem('staff_email');
+  document.getElementById('staff-view').classList.remove('active');
+  document.getElementById('customer-view').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── Staff Tabs ───
+document.querySelectorAll('.staff-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.staff-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.staff-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.panel).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+function toggleCheck(el) {
+  el.classList.toggle('done');
+  el.textContent = el.classList.contains('done') ? '✓' : '';
+}
+
+// ─── Boot ───
+window.addEventListener('DOMContentLoaded', () => {
+  const name = sessionStorage.getItem('staff_name');
+  if (name) enterStaffView(name);
+  loadContent(); // fetch GAS data and populate
+});
+</script>
+
+</body>
+</html>
