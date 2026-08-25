@@ -3219,9 +3219,19 @@ async function loadContent() {
     if (h.h1_line1)      safeHTML('#hero-h1',
       `${h.h1_line1?.value || ''}<br><span class="gold">${h.h1_line2?.value || ''}</span><br><span class="cream">${h.h1_line3?.value || ''}</span>`);
     if (h.sub)           safeHTML('.hero-sub',       h.sub.value);
-    if (h.stat1_num)     safeHTML('#stat1-num',      h.stat1_num.value);
+    if (h.stat1_num) {
+      let v = String(h.stat1_num.value || '').trim();
+      // ถ้า GAS ส่งมาเป็น decimal (0.93) ให้แปลงเป็น % (93%)
+      if (/^0\.\d+$/.test(v)) v = Math.round(parseFloat(v) * 100) + '%';
+      safeHTML('#stat1-num', v);
+    }
     if (h.stat1_label)   safeHTML('#stat1-label',    h.stat1_label.value);
-    if (h.stat2_num)     safeHTML('#stat2-num',      h.stat2_num.value);
+    if (h.stat2_num) {
+      let v = String(h.stat2_num.value || '').trim();
+      // ถ้า GAS ส่งมาเป็น decimal (0.75) ให้แปลงเป็น % (75%)
+      if (/^0\.\d+$/.test(v)) v = Math.round(parseFloat(v) * 100) + '%';
+      safeHTML('#stat2-num', v);
+    }
     if (h.stat2_label)   safeHTML('#stat2-label',    h.stat2_label.value);
     if (h.stat3_num) { const v=String(h.stat3_num.value||'').trim(); if(v.length<=8&&!/^\w{3}\s/.test(v))safeHTML('#stat3-num',v); }
     if (h.stat3_label)   safeHTML('#stat3-label',    h.stat3_label.value);
